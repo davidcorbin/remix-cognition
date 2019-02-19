@@ -1,0 +1,22 @@
+{
+  "name": "remix-cognition",
+  "version": "0.0.1",
+  "description": "CAI app from COMP350",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidcorbin/remix-cognition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidcorbin/remix-cognition/issues"
+  },
+  "homepage": "https://github.com/davidcorbin/remix-cognition#readme",
+  "devDependencies": {
+    "electron": "^4.0.4"
+  }
+}
