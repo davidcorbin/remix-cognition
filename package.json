@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/davidcorbin/remix-cognition#readme",
   "devDependencies": {
-    "electron": "^4.0.4"
+    "electron": "^4.0.4",
+    "electron-builder": "^20.38.5"
   }
 }

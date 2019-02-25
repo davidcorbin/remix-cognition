@@ -1,0 +1,42 @@
+body {
+    background: rgb(24, 28, 46);
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * Remove Chromium button outline
+ */
+button:focus {
+    outline:0;
+}
+
+.splash-logo {
+    max-width: 50%;
+    display: inline-block;
+}
+
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.splash-start-btn {
+    background: rgb(37, 44, 67);
+    border-radius: 5px;
+    color: #eee;
+    border: 0;
+    font-size: 24px;
+    padding: 10px 30px;
+    margin: 2em 0 0 0;
+    transition: background 0.2s;
+}
+
+.splash-start-btn:hover {
+    background: rgb(79, 87, 110);
+}
