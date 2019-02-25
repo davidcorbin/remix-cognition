@@ -5,11 +5,22 @@
       "https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html",
       "https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html",
       "https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html",
       "https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html",
       "https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html",
       "https://docs.oracle.com/javase/tutorial/java/javaOO/usingobject.html"
+    ]
+  }
+  {
+    "name": "Methods",
+    "urls": [
+      "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html",
+      "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html"
+    ]
+  }
+  {
+    "name": "Constructors",
+    "urls": [
+      "https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html"
     ]
   }
 ]
