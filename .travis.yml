@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- node
+before_script:
+- npm install -g standard
+script:
+- standard -v
+notifications:
+  slack:
+    secure: vbZbCipbDBApHRbR4g+IJghFBRsM5naY4SAv/qW8wBpZahZ/p/8A1SXGXeZc16JZJLCFtFualZtVddfN4hOVf6Z5h6HCEqj46Vzmij/L+09azbeDLiMcYN6Jchi95sP1mnpxlHH24yXxVQiOx8a9YiRkQJSG5UqIDLJ+uRIwG2JDWAKsZ72kbYcjwTD25RlgogGK/7HODgLTjjCBMyK1IwrvZROeabIBGVAdksurEj95dwiIWi09zC8aYl7D+J8+GpVMk4jSKQrngxLRuJIR0G7zu832KyAAEoJ4vL03T5cd4eR+u1qqHAKKGXga0XqtKPW1Q+VqH/xmK0RV8KmIQV9/VXTVCabLQGQzPQ087ypX+Dgjd3dO17RuQZx2qpdKoxoS5R21wsh5Af3nbTud4sA9VC73mQg9d2+tCpII8mxSUZJ/dwyqODBvSDJpSAg+p7DRQSMCqTyq+95Mf0fcAl5eP0Mz0Skx8pd/NqGBJpxOrt42acxgw2PfwMYH4Rpj6ep2bsXUSvFQJm2nlsp8ccz0uDpPXNUvOJcq84VZ3WU76/sZfeZ6KEZqotaTmJ0xiiyELYlLVBb5zW22keqp/Cn6ADKlYjrxmqTaqWLoSty/kiLhHwaviF3PAwuaMUraFyrMUZKtEkGo9itsAaDAHU3+JWaBeTp55mZ/WLFus0Q=
