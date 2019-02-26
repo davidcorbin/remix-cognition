@@ -1,29 +1,65 @@
 [
   {
     "name": "Classes",
-    "urls": [
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/usingobject.html"
+    "sources": [
+      {
+        "title": "Classes",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html"
+      },
+      {
+        "title": "Class Declaration",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html"
+      },
+      {
+        "title": "Variables",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html"
+      },
+      {
+        "title": "Class Variables",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html"
+      },
+      {
+        "title": "Objects",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html"
+      },
+      {
+        "title": "Object Creation",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html"
+      },
+      {
+        "title": "Using Objects",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/usingobject.html"
+      }
     ]
-  }
+  },
   {
     "name": "Methods",
-    "urls": [
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html",     
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/returnvalue.html",
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"
+    "sources": [
+      {
+        "title": "Methods",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html"
+      },
+      {
+        "title": "Arguments",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html"
+      },
+      {
+        "title": "Return Value",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/returnvalue.html"
+      },
+      {
+        "title": "Access Control",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"
+      }
     ]
-  }
+  },
   {
     "name": "Constructors",
-    "urls": [
-      "https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html"
+    "sources": [
+      {
+        "title": "Constructors",
+        "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html"
+      }
     ]
   }
 ]
