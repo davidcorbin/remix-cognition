@@ -21,6 +21,7 @@
     "electron": "^4.0.4"
   },
   "dependencies": {
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "xvfb-maybe": "^0.2.1"
   }
 }
