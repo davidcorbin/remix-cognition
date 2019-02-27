@@ -44,4 +44,10 @@ describe('Application launch', function () {
       // assert.equal(count, 2)
     })
   })
+
+  it('Window Title is "Remix Cognition"', function () {
+    return this.app.client.getTitle().then(function (title) {
+      assert.equal(title, "Remix Cognition")
+    })
+  })
 })
