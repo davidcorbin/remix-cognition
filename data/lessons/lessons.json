@@ -1,6 +1,7 @@
 [
   {
     "name": "Classes",
+    "id": 1,
     "sources": [
       {
         "title": "Classes",
@@ -34,6 +35,7 @@
   },
   {
     "name": "Methods",
+    "id": 2,
     "sources": [
       {
         "title": "Methods",
@@ -55,6 +57,7 @@
   },
   {
     "name": "Constructors",
+    "id": 3,
     "sources": [
       {
         "title": "Constructors",
