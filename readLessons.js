@@ -1,12 +1,12 @@
-function loadLesson () {
-  var lessonName
+function loadLessons () {
   const fs = require('fs')
   let rawdata = fs.readFileSync('./data/lessons/lessons.json')
   let allLessons = JSON.parse(rawdata)
+  const ul = document.querySelector('ul')
   allLessons.forEach(function (element) {
-    if (element.id === 1) {
-      lessonName = `<h>${element.name}</h>`
-    }
+    const li = document.createElement('button')
+    const itemText = document.createTextNode(element.name)
+    li.appendChild(itemText)
+    ul.appendChild(li)
   })
-  document.getElementById('button1').innerHTML = lessonName
 }
