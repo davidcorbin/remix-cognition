@@ -13,5 +13,9 @@
     </script>
     <script type="text/javascript" src="./data/lessons/lessons.json">
     </script>
+    <script>
+    var text = window.location.hash.substring(1)
+    document.getElementById('lessonContent').innerHTML = text
+    </script>
   </body>
 </html>

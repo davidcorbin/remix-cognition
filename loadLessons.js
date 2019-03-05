@@ -7,7 +7,7 @@ this.onload = function () {
     const li = document.createElement('li')
     const listButton = document.createElement('button')
     listButton.onclick = function () {
-      window.location.href = 'lesson.html'
+      window.location.href = 'lesson.html' + '#' + element.name
     }
     listButton.innerHTML = element.name
     li.appendChild(listButton)
