@@ -28,11 +28,11 @@
       if (element.name == lessonName) {
         element.sources.forEach(function (source) {
           const li = document.createElement('li')
-          const sourceLabel = document.createElement('label')
-          sourceLabel.innerHTML = source.title
           const listButton = document.createElement('button')
-          listButton.innerHTML = source.url
-          li.appendChild(sourceLabel)
+          listButton.innerHTML = source.title
+          listButton.onclick = function(){
+            window.location.href = source.url
+          }
           li.appendChild(listButton)
           ol.appendChild(li)
         })
