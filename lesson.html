@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Remix Cognition</title>
-  </head>
-  <body>
-    <h1>Lesson</h1>
-    <h id='lessonContent'>b</h>
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-    <script type="text/javascript" src="./data/lessons/lessons.json">
-    </script>
-    <script>
-    var text = window.location.hash.substring(1)
-    document.getElementById('lessonContent').innerHTML = text
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Remix Cognition</title>
+</head>
+
+<body>
+  <h1>Lesson</h1>
+  <h id='lessonContent'>b</h>
+  <ol id='lessonPages'></ol>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+  <script type="text/javascript" src="./data/lessons/lessons.json">
+  </script>
+  <script>
+    var lessonName = window.location.hash.substring(1)
+    document.getElementById('lessonContent').innerHTML = lessonName
+    const ol = document.getElementById('lessonPages')
+    // file I/O
+    const fs = require('fs')
+    let rawdata = fs.readFileSync('./data/lessons/lessons.json')
+    let allLessons = JSON.parse(rawdata)
+    allLessons.forEach(function (element) {
+      if (element.name == lessonName) {
+        element.sources.forEach(function (source) {
+          const li = document.createElement('li')
+          const listButton = document.createElement('button')
+          listButton.innerHTML = source.url
+          li.appendChild(listButton)
+          ol.appendChild(li)
+        })
+      }
+    })
+  </script>
+</body>
+
 </html>

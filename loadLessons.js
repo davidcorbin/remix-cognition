@@ -2,7 +2,7 @@ this.onload = function () {
   const fs = require('fs')
   let rawdata = fs.readFileSync('./data/lessons/lessons.json')
   let allLessons = JSON.parse(rawdata)
-  const ul = document.getElementById('lessons')
+  const ol = document.getElementById('lessons')
   allLessons.forEach(function (element) {
     const li = document.createElement('li')
     const listButton = document.createElement('button')
@@ -11,6 +11,6 @@ this.onload = function () {
     }
     listButton.innerHTML = element.name
     li.appendChild(listButton)
-    ul.appendChild(li)
+    ol.appendChild(li)
   })
 }
