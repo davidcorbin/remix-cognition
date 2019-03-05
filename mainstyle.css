@@ -1,0 +1,52 @@
+:root {
+	--main-dark: #141626;
+	--main-text: #EAEAEA;
+	--main-lighter: #1C2035;
+	--button-hover: #3F4A89;
+}
+
+body {
+	font-family: "Helvetica Neue";
+	font-weight: 400;
+	background: var(--main-dark);
+	color: var(--main-text);
+}
+
+#lessons {
+	list-style-type: none;
+}
+
+a {
+	font-size: 100%;
+	font-family: inherit;
+	color: inherit;
+	font-weight: 800;
+	border: 0px;
+	padding: 10px;
+	background: var(--main-dark);
+	border-radius: 6px;
+	transition: 0.2s;
+}
+
+a:hover {
+	background: var(--button-hover);
+	cursor: pointer;
+}
+
+.sidebar {
+	background: var(--main-lighter);
+	position: fixed;
+	width: 200px;
+	overflow-y: scroll;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.sidebar > * {
+	margin: 14px;
+}
+
+.sidebar > div {
+	line-height: 3.5;	
+}
