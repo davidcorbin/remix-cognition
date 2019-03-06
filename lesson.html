@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Remix Cognition</title>
-  <link rel="stylesheet" href="mainstyle.css"/>
-</head>
-
-<body>
-  <h1>Lesson</h1>
-  <a href="index.html">Home</a>
-  <h id="lessonContent">b</h>
-  <ol id="lessonPages"></ol>
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
-  <script type="text/javascript" src="./data/lessons/lessons.json">
-  </script>
-  <script>
-    var lessonID = window.location.hash.substring(1)
-    // document.getElementById('lessonContent').innerHTML = lessonName
-    const ol = document.getElementById('lessonPages')
-    // file I/O
-    const fs = require('fs')
-    let rawdata = fs.readFileSync('./data/lessons/lessons.json')
-    let allLessons = JSON.parse(rawdata)
-    allLessons.forEach(function (element) {
-      if (element.id == lessonID) {
-        document.getElementById('lessonContent').innerHTML = element.name;
-        element.sources.forEach(function (source) {
-          const li = document.createElement('li')
-          const sourceLabel = document.createElement('label')
-          sourceLabel.innerHTML = source.title
-          const listButton = document.createElement('button')
-          listButton.innerHTML = source.url
-          li.appendChild(sourceLabel)
-          li.appendChild(listButton)
-          ol.appendChild(li)
-        })
-      }
-    })
-  </script>
-</body>
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Remix Cognition</title>
+    <link rel="stylesheet" href="mainstyle.css"/>
+  </head>
+  <body>
+    <h1>Lesson</h1>
+    <div>
+      <a href="index.html">Home</a>
+    </div>
+    <h id="lessonContent">b</h>
+    <ol id="lessonPages"></ol>
+    <div>
+      <a id="finishLesson">Finish</a>
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <script type="text/javascript" src="lessonContent.js"></script>
+  </body>
 </html>
