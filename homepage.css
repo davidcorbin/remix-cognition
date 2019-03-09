@@ -40,6 +40,31 @@
 	background: var(--button-finished);
 }
 
+.sidebar-connectors {
+	width: 1%;
+	background: blue;
+	float: left;
+	margin: 10px 12px 10px 12px;
+}
+
+.sidebar-connector {
+	width: 100%;
+	height: 36px;
+	background: var(--main-text);
+}
+
+.sidebar-connector-spacer-in-section {
+	width: 100%;
+	height: 20px;
+	background: var(--main-text);
+}
+
+.sidebar-connector-spacer-between-section {
+	width: 100%;
+	height: 20px;
+	background: var(--main-lighter                                                                                                                                                                                                   );
+}
+
 .content {
 	margin-left: var(--sidebar-width);
 	float: left;
@@ -50,12 +75,12 @@
 	margin: 20px;
 }
 
-.sidebar > * {
+.sidebar > #lessons, h1 {
 	margin: 14px;
 }
 
 .sidebar > div {
-	line-height: 3.5;	
+	line-height: 3.5;
 }
 
 #progChart {
