@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pretest": "standard -v | snazzy",
+    "pretest": "standard -v | snazzy; htmlhint",
     "test": "mocha"
   },
   "repository": {
@@ -25,7 +25,10 @@
     "snazzy": "^8.0.0",
     "spectron": "^5.0.0",
     "standard": "^12.0.1",
-    "xvfb-maybe": "^0.2.1"
+    "xvfb-maybe": "^0.2.1",
+    "htmlhint": "^0.11.0",
+    "chart.js": "^2.7.3",
+    "electron-store": "^2.0.0"
   },
   "standard": {
     "ignore": [
