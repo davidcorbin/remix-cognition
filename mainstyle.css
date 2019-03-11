@@ -1,0 +1,73 @@
+:root {
+	--main-dark: #141626;
+	--main-text: #EAEAEA;
+	--main-lighter: #1C2035;
+	--button-hover: #5D65FF;
+}
+
+body {
+	font-family: Helvetica Neue, Arial, sans-serif;
+	font-weight: 400;
+	background: var(--main-dark);
+	color: var(--main-text);
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar {
+	height: 12px;
+	width: 8px;
+	background: var(--main-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--main-text);
+	-webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+	background: #000;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.navbar {
+	margin: 0;
+	overflow: auto;
+	display: flex;
+	justify-content: space-between; /* align horizontal */
+	align-items: center; /* align vertical */
+}
+
+.nav-left, .nav-right {
+	padding: 2em;
+	display: block;
+}
+
+.nav-left a, .nav-right a {
+	font-size: 100%;
+	font-family: inherit;
+	color: inherit;
+	font-weight: 800;
+	border: 0px;
+	padding: 10px;
+	background: var(--main-dark);
+	border-radius: 6px;
+	transition: 0.2s;
+	text-decoration: none;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+	background: var(--button-hover);
+}
