@@ -51,10 +51,10 @@ function loadLessons () {
   let allExams = getExams()
 
   const sidebarConnectors = document.getElementById('sidebar-connectors')
-  const ol = document.getElementById('lessons')
+  const content = document.getElementById('content')
 
   // For each lesson in the sidebar
-  allLessons.forEach(function (element, i) {
+  allLessons.forEach(function (lesson, i) {
     // For each section in the section list
     allSections.sections.forEach(function (section, j) {
       if (section.lessons.includes(i + 1)) {
@@ -73,21 +73,38 @@ function loadLessons () {
       }
     })
 
-    const li = document.createElement('div')
-    const listButton = document.createElement('a')
+    const lessonDiv = document.createElement('div')
+    const lessonButton = document.createElement('a')
 
     // Set class based on whether the lesson is started or finished
-    if (started.includes(element.id.toString())) { listButton.className = 'started' }
-    if (finished.includes(element.id.toString())) { listButton.className = 'finished' }
+    if (started.includes(lesson.id.toString())) { lessonButton.className = 'started' }
+    if (finished.includes(lesson.id.toString())) { lessonButton.className = 'finished' }
 
     // Set hyperlink
     listButton.onclick = function () {
-      window.location.href = 'lesson.html#' + element.id
+      window.location.href = 'lesson.html#' + lesson.id
     }
 
-    listButton.innerHTML = element.name
-    li.appendChild(listButton)
-    ol.appendChild(li)
+    listButton.innerHTML = lesson.name
+    lessonDiv.appendChild(lessonButton)
+    content.appendChild(lessonDiv)
+
+    // Add the appropriate exams after the lesson
+    /*allExams.foreach(function (exam, ids) {
+      // Check the last ID to determine placement
+      if(ids[ids.length - 1] == i){
+        const examDiv = document.createElement('div')
+        const examButton = document.createElement('a')
+        // Set hyperlink
+        examButton.onclick = function () {
+          window.location.href = 'exam.html#' + exam.ids
+        }
+
+        examButton.innerHTML = exam.name
+        examDiv.appendChild(examButton)
+        content.appendChild(examDiv)
+      }
+    })*/
   })
 }
 
