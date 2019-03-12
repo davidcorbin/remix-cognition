@@ -5,7 +5,7 @@
   "main": "js/main.js",
   "scripts": {
     "start": "electron .",
-    "pretest": "standard -v | snazzy; htmlhint",
+    "pretest": "standard -v | snazzy && htmlhint",
     "test": "mocha"
   },
   "repository": {
