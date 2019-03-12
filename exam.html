@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Remix Cognition</title>
+    <link rel="stylesheet" href="mainstyle.css"/>
+    <link rel="stylesheet" href="css/lessonstyle.css"/>
+  </head>
+  <body class="noselect">
+    This is the exam page for lesson(s):
+    <div id='test'>
+
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+
+      var contentID = window.location.hash.substring(1)
+      let test = document.getElementById('test')
+      test.innerHTML = contentID
+    </script>
+  </body>
+</html>

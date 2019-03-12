@@ -42,10 +42,12 @@ function loadLessons () {
   let Store = require('electron-store')
   let store = new Store()
 
-  var started = store.get('started')
-  if (!Array.isArray(started) || !started.length) { started = [] }
-  var finished = store.get('finished')
-  if (!Array.isArray(finished) || !finished.length) { finished = [] }
+  var lessonsStarted = store.get('started')
+  if (!Array.isArray(lessonsStarted) || !lessonsStarted.length) { lessonsStarted = [] }
+  var lessonsFinished = store.get('finished')
+  if (!Array.isArray(lessonsFinished) || !lessonsFinished.length) { lessonsFinished = [] }
+  var examsFinished = store.get('examsFinished')
+  if (!Array.isArray(examsFinished) || !examsFinished.length) { examsFinished = [] }
   let allLessons = getLessons()
   let allSections = getSections()
   let allExams = getExams()
@@ -55,6 +57,7 @@ function loadLessons () {
 
   // For each lesson in the sidebar
   allLessons.forEach(function (lesson, i) {
+    // ADDING LESSONS
     // For each section in the section list
     allSections.sections.forEach(function (section, j) {
       if (section.lessons.includes(i + 1)) {
@@ -70,8 +73,8 @@ function loadLessons () {
     const lessonButton = document.createElement('a')
 
     // Set class based on whether the lesson is started or finished
-    if (started.includes(lesson.id.toString())) { lessonButton.className = 'started' }
-    if (finished.includes(lesson.id.toString())) { lessonButton.className = 'finished' }
+    if (lessonsStarted.includes(lesson.id.toString())) { lessonButton.className = 'started' }
+    if (lessonsFinished.includes(lesson.id.toString())) { lessonButton.className = 'finished' }
 
     // Set hyperlink
     lessonButton.onclick = function () {
@@ -82,6 +85,7 @@ function loadLessons () {
     lessonDiv.appendChild(lessonButton)
     content.appendChild(lessonDiv)
 
+    // ADDING EXAMS
     // Add the appropriate exams after the lesson
     allExams.exams.forEach(function (exam) {
       // Check the last ID to determine placement
@@ -92,7 +96,7 @@ function loadLessons () {
             const connector = getConnectorElement()
             sidebarConnectors.append(connector)
 
-            if (section.lessons[section.lessons.length - 1] === i + 1) {
+            if (exam.ids.length > 1) {
               // Create connector spacer
               const spacer = getConnectorSpacerBetweenSectionElement()
               sidebarConnectors.append(spacer)
@@ -106,10 +110,14 @@ function loadLessons () {
         const examButton = document.createElement('a')
         // Set hyperlink
         examButton.onclick = function () {
-          window.alert('clicked')
           window.location.href = 'exam.html#' + exam.ids
         }
-        examButton.className = 'started'
+        if (examsFinished.includes(exam.id.toString())) {
+          examButton.className = 'examFinished'
+        } else {
+          examButton.className = 'exam'
+        }
+        // examButton.className = 'finished'
         examButton.innerHTML = exam.name
         examDiv.appendChild(examButton)
         content.appendChild(examDiv)
