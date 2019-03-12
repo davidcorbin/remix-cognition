@@ -75,7 +75,7 @@
 	margin: 20px;
 }
 
-.sidebar > #lessons, h1 {
+.sidebar > #lessons, .lesson-sidebar-title {
 	margin: 14px;
 }
 

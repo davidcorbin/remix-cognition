@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <title>Remix Cognition</title>
-    <link rel="stylesheet" href="mainstyle.css"/>
-    <link rel="stylesheet" href="homepage.css"/>
+    <link rel="stylesheet" href="css/mainstyle.css"/>
+    <link rel="stylesheet" href="css/homepage.css"/>
   </head>
   <body class="noselect">
     <div class="sidebar noselect">
-      <h1>Lessons</h1>
+      <h1 class="lesson-sidebar-title">Lessons</h1>
       <div id="sidebar-connectors" class="sidebar-connectors"></div>
       <div id="lessons" class="noselect"></div>
     </div>
     <div class="content">
       <div>
-        <h1>Hello World!</h1>
+        <h1>Progress</h1>
         <!-- All of the Node.js APIs are available in this renderer process. -->
-        We are using Node.js <script>document.write(process.versions.node)</script>,
-        Chromium <script>document.write(process.versions.chrome)</script>,
-        and Electron <script>document.write(process.versions.electron)</script>.
+        Welcome to Remix Cognition, the intelligent AP Computer Science tutor.
+        <br><br>
         <a id="set">Set User</a>
         <div id="progress">
           <canvas id="progChart"></canvas>
@@ -29,7 +28,7 @@
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
-    <script type="text/javascript" src="loadLessons.js"></script>
+    <script type="text/javascript" src="js/loadLessons.js"></script>
     <script type="text/javascript" src="loadProgress.js"></script>
   </body>
 </html>

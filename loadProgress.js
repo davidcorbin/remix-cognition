@@ -1,5 +1,5 @@
 function loadProgress () {
-  let Chart = require('chart.js')
+  let Chart = require('./node_modules/chart.js/src/chart')
   let Store = require('electron-store')
   let store = new Store()
 
