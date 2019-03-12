@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Remix Cognition</title>
+    <link rel="stylesheet" href="css/mainstyle.css"/>
+    <link rel="stylesheet" href="css/lessonstyle.css"/>
+  </head>
+  <body class="noselect">
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-middle">
+        <h1 id="lessonContent">Lesson</h1>
+      </div>
+      <div class="nav-right">
+        <a id="finishLesson">Finish</a>
+      </div>
+    </div>
+
+    <ol id="lessonPages"></ol>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <script type="text/javascript" src="js/lessonContent.js"></script>
+  </body>
+</html>

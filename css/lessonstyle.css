@@ -1,0 +1,9 @@
+#lessonPages {
+    padding: 0 40px;
+}
+
+.individualLesson iframe {
+    width: 100%;
+    background: #fff;
+    height: 75vh;
+}
