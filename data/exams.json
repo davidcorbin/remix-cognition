@@ -1,21 +1,6 @@
 {
   "exams": [
     {
-      "name": "Classes Quiz",
-      "id": 1,
-      "ids": [1]
-    },
-    {
-      "name": "Methods Quiz",
-      "id": 2,
-      "ids": [2]
-    },
-    {
-      "name": "Const. Quiz",
-      "id": 3,
-      "ids": [3]
-    },
-    {
       "name": "Exam 1",
       "id": 4,
       "ids": [1,2,3]

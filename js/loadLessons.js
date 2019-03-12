@@ -95,15 +95,9 @@ function loadLessons () {
             // Create connector
             const connector = getConnectorElement()
             sidebarConnectors.append(connector)
-
-            if (exam.ids.length > 1) {
-              // Create connector spacer
-              const spacer = getConnectorSpacerBetweenSectionElement()
-              sidebarConnectors.append(spacer)
-            } else {
-              const spacer = getConnectorSpacerInSectionElement()
-              sidebarConnectors.append(spacer)
-            }
+            // Create connector spacer
+            const spacer = getConnectorSpacerBetweenSectionElement()
+            sidebarConnectors.append(spacer)
           }
         })
         const examDiv = document.createElement('div')
