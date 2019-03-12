@@ -1,5 +1,6 @@
 const LESSON_FILE = './data/lessons/lessons.json'
 const SECTIONS_FILE = './data/sections.json'
+const EXAMS_FILE = './data/exams.json'
 
 function getLessons () {
   const fs = require('fs')
@@ -10,6 +11,12 @@ function getLessons () {
 function getSections () {
   const fs = require('fs')
   let rawdata = fs.readFileSync(SECTIONS_FILE)
+  return JSON.parse(rawdata)
+}
+
+function getExams(){
+  const fs = require('fs')
+  let rawdata = fs.readFileSync(EXAMS_FILE)
   return JSON.parse(rawdata)
 }
 
@@ -41,6 +48,7 @@ function loadLessons () {
   if (!Array.isArray(finished) || !finished.length) { finished = [] }
   let allLessons = getLessons()
   let allSections = getSections()
+  let allExams = getExams()
 
   const sidebarConnectors = document.getElementById('sidebar-connectors')
   const ol = document.getElementById('lessons')

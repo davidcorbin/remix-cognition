@@ -1,40 +1,18 @@
 [
     {
       "name": "Classes",
-      "ids": [
-        {
-          "id": "1"
-        }
-      ]
+      "ids": [1]
     },
     {
       "name": "Methods",
-      "ids": [
-        {
-          "id": "2"
-        }
-      ]
+      "ids": [2]
     },
     {
       "name": "Constructors",
-      "ids": [
-        {
-          "id": "3"
-        }
-      ]
+      "ids": [3]
     },
     {
       "name": "Cumulative 1",
-      "ids": [
-        {
-          "id": "1"
-        },
-        {
-          "id": "2"
-        },
-        {
-          "id": "3"
-        }
-      ]
+      "ids": [1,2,3]
     }
   ]
