@@ -14,7 +14,7 @@ function getSections () {
   return JSON.parse(rawdata)
 }
 
-function getExams(){
+function getExams () {
   const fs = require('fs')
   let rawdata = fs.readFileSync(EXAMS_FILE)
   return JSON.parse(rawdata)
@@ -51,7 +51,7 @@ function loadLessons () {
   let allExams = getExams()
 
   const sidebarConnectors = document.getElementById('sidebar-connectors')
-  const content = document.getElementById('content')
+  const content = document.getElementById('lessons')
 
   // For each lesson in the sidebar
   allLessons.forEach(function (lesson, i) {
@@ -61,15 +61,8 @@ function loadLessons () {
         // Create connector
         const connector = getConnectorElement()
         sidebarConnectors.append(connector)
-
-        if (section.lessons[section.lessons.length - 1] === i + 1) {
-          // Create connector spacer
-          const spacer = getConnectorSpacerBetweenSectionElement()
-          sidebarConnectors.append(spacer)
-        } else {
-          const spacer = getConnectorSpacerInSectionElement()
-          sidebarConnectors.append(spacer)
-        }
+        const spacer = getConnectorSpacerInSectionElement()
+        sidebarConnectors.append(spacer)
       }
     })
 
@@ -81,30 +74,47 @@ function loadLessons () {
     if (finished.includes(lesson.id.toString())) { lessonButton.className = 'finished' }
 
     // Set hyperlink
-    listButton.onclick = function () {
+    lessonButton.onclick = function () {
       window.location.href = 'lesson.html#' + lesson.id
     }
 
-    listButton.innerHTML = lesson.name
+    lessonButton.innerHTML = lesson.name
     lessonDiv.appendChild(lessonButton)
     content.appendChild(lessonDiv)
 
     // Add the appropriate exams after the lesson
-    /*allExams.foreach(function (exam, ids) {
+    allExams.exams.forEach(function (exam) {
       // Check the last ID to determine placement
-      if(ids[ids.length - 1] == i){
+      if (exam.ids[exam.ids.length - 1] === i + 1) {
+        allSections.sections.forEach(function (section, j) {
+          if (section.lessons.includes(i + 1)) {
+            // Create connector
+            const connector = getConnectorElement()
+            sidebarConnectors.append(connector)
+
+            if (section.lessons[section.lessons.length - 1] === i + 1) {
+              // Create connector spacer
+              const spacer = getConnectorSpacerBetweenSectionElement()
+              sidebarConnectors.append(spacer)
+            } else {
+              const spacer = getConnectorSpacerInSectionElement()
+              sidebarConnectors.append(spacer)
+            }
+          }
+        })
         const examDiv = document.createElement('div')
         const examButton = document.createElement('a')
         // Set hyperlink
         examButton.onclick = function () {
+          window.alert('clicked')
           window.location.href = 'exam.html#' + exam.ids
         }
-
+        examButton.className = 'started'
         examButton.innerHTML = exam.name
         examDiv.appendChild(examButton)
         content.appendChild(examDiv)
       }
-    })*/
+    })
   })
 }
 

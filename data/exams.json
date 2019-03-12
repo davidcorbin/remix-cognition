@@ -1,18 +1,20 @@
-[
+{
+  "exams": [
     {
-      "name": "Classes",
+      "name": "Classes Quiz",
       "ids": [1]
     },
     {
-      "name": "Methods",
+      "name": "Methods Quiz",
       "ids": [2]
     },
     {
-      "name": "Constructors",
+      "name": "Const. Quiz",
       "ids": [3]
     },
     {
-      "name": "Cumulative 1",
+      "name": "Exam 1",
       "ids": [1,2,3]
     }
   ]
+}
