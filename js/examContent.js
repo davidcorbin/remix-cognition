@@ -1,11 +1,13 @@
 function quizContent () {
-  let Store = require('electron-store')
-  let store = new Store()
+  // let Store = require('electron-store')
+  // let store = new Store()
 
   // Get Section information
   const SECTION_FILE = './data/sections.json'
   const fs = require('fs')
   const SECTION_DATA = JSON.parse(fs.readFileSync(SECTION_FILE))
+
+  var questionFile, questionData, questionShuffled
 
   // Get quiz/exam number and set title
   var examID = window.location.hash.substring(1)
@@ -21,11 +23,18 @@ function quizContent () {
   let questionsContent = document.getElementById('questions')
 
   if (isQuiz) {
+    // Set button to go to lesson
+    document.getElementById('gotoLesson').addEventListener('click', function () {
+      window.location = './lesson.html#' + examID
+    })
+
     // Get Questions from examID.json
-    const questionFile = './data/questions/' + examID + '.json'
-    const questionData = JSON.parse(fs.readFileSync(questionFile))
-    console.log(questionData)
-    questionData.forEach(function (question) {
+    questionFile = './data/questions/' + examID + '.json'
+    questionData = JSON.parse(fs.readFileSync(questionFile))
+    questionShuffled = JSON.parse(fs.readFileSync(questionFile))
+    questionShuffled.forEach(function (question) {
+      console.log(question.answers[0])
+      question.answers = shuffle(question.answers)
       var box = document.createElement('div')
       box.className = 'question-box'
 
@@ -37,7 +46,19 @@ function quizContent () {
       question.answers.forEach(function (answer) {
         var answerDiv = document.createElement('div')
         answerDiv.addEventListener('click', function () {
+          if (this.className.includes('chosen') || this.className.includes('disabled')) {
+            // If clicked other answer, change answer
+            this.parentElement.childNodes.forEach(function (sibling) {
+              sibling.className = sibling.className.replace(' chosen', '')
+              sibling.className = sibling.className.replace(' disabled', '')
+            })
+          }
           this.className = this.className + ' chosen'
+          this.parentElement.childNodes.forEach(function (sibling) {
+            if (!sibling.className.includes('chosen')) {
+              sibling.className += ' disabled'
+            }
+          })
         })
         answerDiv.className = 'question-answer'
         answerDiv.innerHTML = answer
@@ -55,17 +76,73 @@ function quizContent () {
   }
 
   document.getElementById('finishExam').addEventListener('click', function () {
-    var finished = store.get('examsFinished')
-    if (!Array.isArray(finished) || !finished.length) { finished = [] }
-    if (!finished.includes(examID.toString())) {
-      finished.push(examID)
+    // Get chosen answers into an array
+    const chosenDivs = document.getElementsByClassName('chosen')
+    var chosenAnswers = []
+    for (var div of chosenDivs) {
+      chosenAnswers.push(div.innerHTML)
     }
-    store.set('examsFinished', finished)
-    window.location.href = 'index.html'
-  })
+    console.log(chosenAnswers)
 
-  document.getElementById('answerChoice').addEventListener('click', function () {
-    this.className = this.className + ' chosen'
+    // Get question boxes
+    const questionBoxes = document.getElementsByClassName('question-box')
+
+    // Array to be stored
+    // var storeArray = []
+
+    // Go through each answer
+    for (var i = 0; i < chosenAnswers.length; i++) {
+      // Get the right answer
+      var answer = chosenAnswers[i]
+      var correct = questionData[i].answers[0]
+      var question = questionBoxes.item(i)
+
+      // Check if each answer is right
+      var applyClass = 'incorrect'
+      console.log(answer + ' == ' + correct)
+      if (answer === correct) {
+        applyClass = 'correct'
+        console.log(i + 1 + ' correct')
+      } else {
+        applyClass = 'incorrect'
+        console.log(i + 1 + ' incorrect')
+        question.childNodes.forEach(function (answer) {
+          if (answer.innerHTML === correct) {
+            answer.className = answer.className.replace(' disabled', '')
+            answer.className += ' correct'
+          }
+        })
+      }
+      question.childNodes.forEach(function (answer) {
+        if (answer.className.includes('chosen')) {
+          answer.className = answer.className.replace(' chosen', '')
+          answer.className += ' ' + applyClass
+        }
+      })
+    }
+
+    // var finished = store.get('examsFinished')
+    // if (!Array.isArray(finished) || !finished.length) { finished = [] }
+    // if (!finished.includes(examID.toString())) {
+    //   finished.push(examID)
+    // }
+    // store.set('examsFinished', finished)
+    // window.location.href = 'index.html'
   })
+}
+// Fisher-Yates Shuffle
+function shuffle (array) {
+  var currentIndex = array.length; var temporaryValue; var randomIndex
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex -= 1
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex]
+    array[currentIndex] = array[randomIndex]
+    array[randomIndex] = temporaryValue
+  }
+  return array
 }
 quizContent()

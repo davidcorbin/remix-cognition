@@ -5,7 +5,9 @@
 	--button-hover: #5D65FF;
 	--button-visited: #292766;
 	--button-finished: #4C52C7;
-	--chosen-green: #20B81B;
+	--chosen-grey: #2A3059;
+	--correct: #20B81B;
+	--incorrect: #D40505;
 	--sidebar-width: 200px;
 }
 
@@ -18,7 +20,7 @@ body {
 }
 
 a {
-	text-decoration: underline;
+	text-decoration: none;
 	cursor: pointer;
 }
 
@@ -59,7 +61,7 @@ a {
 	display: block;
 }
 
-.nav-left a, .nav-right a {
+.nav-left a, .nav-right a, .actionButton a {
 	font-size: 100%;
 	font-family: inherit;
 	color: inherit;
@@ -69,9 +71,20 @@ a {
 	background: var(--main-dark);
 	border-radius: 6px;
 	transition: 0.2s;
-	text-decoration: none;
 }
 
-.nav-left a:hover, .nav-right a:hover {
+.nav-left a:hover, .nav-right a:hover, .actionButton a:hover {
 	background: var(--button-hover);
+}
+
+.actionButton {
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	margin: 20px;
+	margin-bottom: 30px;
+}
+
+.actionButton a {
+	background: var(--main-lighter);
 }

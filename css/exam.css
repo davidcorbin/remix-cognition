@@ -2,13 +2,22 @@
 	text-align: center;
 	margin: 0 auto;
 	width: 70%;
+	counter-reset: questionNum;
 }
+
 .question-box {
 	text-align: justify;
 	margin: 40px;
 	background: var(--main-lighter);
 	padding: 15px;
 	border-radius: 7px;
+}
+
+.question-text::before {
+	counter-increment: questionNum;
+	content: counter(questionNum);
+	margin-right: 7px;
+	font-weight: 900;
 }
 
 .question-text {
@@ -19,17 +28,17 @@
 }
 
 .question-answer::before {
-	font-weight: 800;
 	counter-increment: answerNum;
 	content: counter(answerNum, upper-alpha);
 	margin-right: 7px;
+	font-weight: 800;
 }
 
 .question-answer {
-	padding: 4px;
+	padding: 6px;
 	margin: 2px;
 	border-radius: 3px;
-	transition: 0.2s;
+	cursor: pointer;
 }
 
 .question-answer > a {
@@ -37,11 +46,22 @@
 	text-align: justify-all;
 }
 
-.question-answer:hover {
+.question-answer:not(.disabled):not(.chosen):hover {
 	background: var(--button-hover);
-	cursor: pointer;
 }
 
-.chosen {
-	background: var(--chosen-green) !important;
+.question-answer.disabled {
+	opacity: 0.3;
+}
+
+.question-answer.chosen {
+	background: var(--chosen-grey);
+}
+
+.question-answer.correct {
+	background: var(--correct)
+}
+
+.question-answer.incorrect {
+	background: var(--incorrect)
 }
