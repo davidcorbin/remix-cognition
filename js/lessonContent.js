@@ -48,5 +48,9 @@ function lessonContent () {
     store.set('finished', finished)
     window.location.href = 'index.html'
   })
+
+  document.getElementById('gotoQuiz').addEventListener('click', function () {
+    window.location.href = 'exam.html#Q' + lessonID
+  })
 }
 lessonContent()

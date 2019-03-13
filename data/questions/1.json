@@ -3,36 +3,20 @@
     "text" : "How many objects instances can you create from a class?",
     "numChoices" : 4,
     "answers" : [
-      {
-        "answer" : "Infinitely many object instances can be created from one class."
-      },
-      {
-        "answer" : "Only one object can be created per class."
-      },
-      {
-        "answer" : "You can only create a set number of objects per class, this number is defined in the class."
-      },
-      {
-        "answer" : "You can create only one object instance per constructor in the class."
-      }
+      "Infinitely many object instances can be created from one class.",
+      "Only one object can be created per class.",
+      "You can only create a set number of objects per class, this number is defined in the class.",
+      "You can create only one object instance per constructor in the class."
     ]
   },
   {
     "text" : "Which of the following determines the functions of an object",
     "numChoices" : 4,
     "answers" : [
-      {
-        "answer" : "Methods"
-      },
-      {
-        "answer" : "Constructors"
-      },
-      {
-        "answer" : "Class"
-      },
-      {
-        "answer" : "Variables"
-      }
+      "Methods",
+      "Constructors",
+      "Class",
+      "Variables"
     ]
   }
 ]

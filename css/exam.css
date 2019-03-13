@@ -1,0 +1,47 @@
+#questions {
+	text-align: center;
+	margin: 0 auto;
+	width: 70%;
+}
+.question-box {
+	text-align: justify;
+	margin: 40px;
+	background: var(--main-lighter);
+	padding: 15px;
+	border-radius: 7px;
+}
+
+.question-text {
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 17px;
+	counter-reset: answerNum;
+}
+
+.question-answer::before {
+	font-weight: 800;
+	counter-increment: answerNum;
+	content: counter(answerNum, upper-alpha);
+	margin-right: 7px;
+}
+
+.question-answer {
+	padding: 4px;
+	margin: 2px;
+	border-radius: 3px;
+	transition: 0.2s;
+}
+
+.question-answer > a {
+	text-decoration: none;
+	text-align: justify-all;
+}
+
+.question-answer:hover {
+	background: var(--button-hover);
+	cursor: pointer;
+}
+
+.chosen {
+	background: var(--chosen-green) !important;
+}

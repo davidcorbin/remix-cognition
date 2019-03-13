@@ -3,6 +3,10 @@
 	--main-text: #EAEAEA;
 	--main-lighter: #1C2035;
 	--button-hover: #5D65FF;
+	--button-visited: #292766;
+	--button-finished: #4C52C7;
+	--chosen-green: #20B81B;
+	--sidebar-width: 200px;
 }
 
 body {
