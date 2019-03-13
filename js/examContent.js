@@ -1,6 +1,6 @@
 function quizContent () {
-  // let Store = require('electron-store')
-  // let store = new Store()
+  let Store = require('electron-store')
+  let store = new Store()
 
   // Get Section information
   const SECTION_FILE = './data/sections.json'
@@ -8,6 +8,7 @@ function quizContent () {
   const SECTION_DATA = JSON.parse(fs.readFileSync(SECTION_FILE))
 
   var questionFile, questionData, questionShuffled
+  var examDone = false
 
   // Get quiz/exam number and set title
   var examID = window.location.hash.substring(1)
@@ -28,6 +29,10 @@ function quizContent () {
       window.location = './lesson.html#' + examID
     })
 
+    // TODO: Put lesson title on top
+
+    // TODO: Check if quiz already taken
+
     // Get Questions from examID.json
     questionFile = './data/questions/' + examID + '.json'
     questionData = JSON.parse(fs.readFileSync(questionFile))
@@ -46,6 +51,9 @@ function quizContent () {
       question.answers.forEach(function (answer) {
         var answerDiv = document.createElement('div')
         answerDiv.addEventListener('click', function () {
+          if (examDone) {
+            return
+          }
           if (this.className.includes('chosen') || this.className.includes('disabled')) {
             // If clicked other answer, change answer
             this.parentElement.childNodes.forEach(function (sibling) {
@@ -87,8 +95,23 @@ function quizContent () {
     // Get question boxes
     const questionBoxes = document.getElementsByClassName('question-box')
 
-    // Array to be stored
-    // var storeArray = []
+    // Check for every answer
+    var errorDisp = document.getElementById('errorDisp')
+    if (chosenAnswers.length !== questionBoxes.length) {
+      errorDisp.innerHTML = 'Answer ' + (questionBoxes.length - chosenAnswers.length) + ' more question(s) first.'
+      return
+    } else {
+      errorDisp.innerHTML = ''
+    }
+
+    // Set variable so cant click answers anymore
+    examDone = true
+    // Hide button
+    this.className += ' hidden'
+
+    // Data to be stored
+    var correctResponse = []
+    var correctNum = 0
 
     // Go through each answer
     for (var i = 0; i < chosenAnswers.length; i++) {
@@ -99,13 +122,13 @@ function quizContent () {
 
       // Check if each answer is right
       var applyClass = 'incorrect'
-      console.log(answer + ' == ' + correct)
       if (answer === correct) {
+        correctNum++
         applyClass = 'correct'
-        console.log(i + 1 + ' correct')
+        correctResponse.push(true)
       } else {
         applyClass = 'incorrect'
-        console.log(i + 1 + ' incorrect')
+        correctResponse.push(false)
         question.childNodes.forEach(function (answer) {
           if (answer.innerHTML === correct) {
             answer.className = answer.className.replace(' disabled', '')
@@ -120,6 +143,12 @@ function quizContent () {
         }
       })
     }
+    console.log(correctNum)
+    var result = {}
+    result['answers'] = correctResponse
+    result['correct'] = correctNum
+    result['numQuestions'] = chosenAnswers.length
+    store.set('quizzes.' + examID, result)
 
     // var finished = store.get('examsFinished')
     // if (!Array.isArray(finished) || !finished.length) { finished = [] }

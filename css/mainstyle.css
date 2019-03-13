@@ -81,10 +81,13 @@ a {
 	text-align: center;
 	font-weight: 600;
 	font-size: 20px;
-	margin: 20px;
-	margin-bottom: 30px;
+	margin: 30px;
 }
 
 .actionButton a {
 	background: var(--main-lighter);
+}
+
+.hidden {
+	display: none;
 }

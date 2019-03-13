@@ -1,6 +1,6 @@
 [
   {
-    "text" : "How many objects instances can you create from a class?",
+    "text" : "How many objects instances can you create from a class",
     "answers" : [
       "Infinitely many object instances can be created from one class.",
       "Only one object can be created per class.",
