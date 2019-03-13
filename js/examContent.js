@@ -79,6 +79,7 @@ function quizContent () {
     // Get questions from lessons specified in sections.json
     // This line is a bit sketch, we should have better way of getting the element of array
     var lessonsCovered = SECTION_DATA.sections[examID - 1].lessons
+    console.log(lessonsCovered)
     document.getElementById('lessonsCovered').innerHTML = 'Lessons Covered: ' + lessonsCovered
     questionsContent.innerHTML = 'Working on exams...'
   }
@@ -144,11 +145,19 @@ function quizContent () {
       })
     }
     console.log(correctNum)
+    // Store results
     var result = {}
-    result['answers'] = correctResponse
-    result['correct'] = correctNum
+    result['correctAnswers'] = correctResponse
+    result['numCorrect'] = correctNum
     result['numQuestions'] = chosenAnswers.length
     store.set('quizzes.' + examID, result)
+
+    // Display Result
+    var resultDiv = document.getElementById('results')
+    resultDiv.innerHTML = correctNum + '/' + chosenAnswers.length +
+      ': ' + Math.floor(100 * correctNum / chosenAnswers.length) + '%'
+    var homeButton = document.getElementById('goHome')
+    homeButton.className = homeButton.className.replace(' hidden', '')
 
     // var finished = store.get('examsFinished')
     // if (!Array.isArray(finished) || !finished.length) { finished = [] }
