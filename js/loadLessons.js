@@ -1,22 +1,14 @@
 const LESSON_FILE = './data/lessons/lessons.json'
 const SECTIONS_FILE = './data/sections.json'
-const EXAMS_FILE = './data/exams.json'
+const fs = require('fs')
 
 function getLessons () {
-  const fs = require('fs')
   let rawdata = fs.readFileSync(LESSON_FILE)
   return JSON.parse(rawdata)
 }
 
 function getSections () {
-  const fs = require('fs')
   let rawdata = fs.readFileSync(SECTIONS_FILE)
-  return JSON.parse(rawdata)
-}
-
-function getExams () {
-  const fs = require('fs')
-  let rawdata = fs.readFileSync(EXAMS_FILE)
   return JSON.parse(rawdata)
 }
 
@@ -50,7 +42,6 @@ function loadLessons () {
   if (!Array.isArray(examsFinished) || !examsFinished.length) { examsFinished = [] }
   let allLessons = getLessons()
   let allSections = getSections()
-  let allExams = getExams()
 
   const sidebarConnectors = document.getElementById('sidebar-connectors')
   const content = document.getElementById('lessons')
@@ -87,9 +78,9 @@ function loadLessons () {
 
     // ADDING EXAMS
     // Add the appropriate exams after the lesson
-    allExams.exams.forEach(function (exam) {
+    allSections.sections.forEach(function (section) {
       // Check the last ID to determine placement
-      if (exam.ids[exam.ids.length - 1] === i + 1) {
+      if (section.lessons[section.lessons.length - 1] === i + 1) {
         allSections.sections.forEach(function (section, j) {
           if (section.lessons.includes(i + 1)) {
             // Create connector
@@ -104,20 +95,16 @@ function loadLessons () {
         const examButton = document.createElement('a')
         // Set hyperlink
         examButton.onclick = function () {
-          window.location.href = 'exam.html#' + exam.ids
+          window.location.href = 'exam.html#' + section.id
         }
-        if (examsFinished.includes(exam.id.toString())) {
-          examButton.className = 'examFinished'
-        } else {
-          examButton.className = 'exam'
+        if (examsFinished.includes(section.id.toString())) {
+          examButton.className = 'finished'
         }
-        // examButton.className = 'finished'
-        examButton.innerHTML = exam.name
+        examButton.innerHTML = 'Exam ' + section.id
         examDiv.appendChild(examButton)
         content.appendChild(examDiv)
       }
     })
   })
 }
-
 loadLessons()

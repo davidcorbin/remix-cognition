@@ -34,5 +34,8 @@
     "ignore": [
       "/test/*.js"
     ]
+  },
+  "dependencies": {
+    "electron-reload": "^1.4.0"
   }
 }

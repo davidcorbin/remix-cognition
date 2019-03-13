@@ -2,19 +2,18 @@
   "sections": [
     {
       "name": "Section 1",
+      "id": 1,
       "lessons": [1,2,3]
     },
     {
       "name": "Section 2",
-      "lessons": [4,5,6,7]
+      "id": 2,
+      "lessons": [4,5,6]
     },
     {
       "name": "Section 3",
-      "lessons": [8,9]
-    },
-    {
-      "name": "Section 4",
-      "lessons": [10,11,12]
+      "id": 3,
+      "lessons": [7,8]
     }
   ]
 }

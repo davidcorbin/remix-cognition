@@ -3,21 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>Remix Cognition</title>
-    <link rel="stylesheet" href="mainstyle.css"/>
+    <link rel="stylesheet" href="css/mainstyle.css"/>
     <link rel="stylesheet" href="css/lessonstyle.css"/>
   </head>
   <body class="noselect">
-    This is the exam page for lesson(s):
-    <div id="test">
-
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-middle">
+        <h1 id="lessonContent">Exam <span id="examNum"></span></h1>
+      </div>
+      <div class="nav-right">
+        <a id="finishExam">Finish</a>
+      </div>
     </div>
+    This is the exam page for lesson(s): <span id="lessonsCovered"></span>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
-
-      var contentID = window.location.hash.substring(1)
-      let test = document.getElementById("test")
-      test.innerHTML = contentID
     </script>
+    <script type="text/javascript" src="js/quizContent.js"></script>
   </body>
 </html>

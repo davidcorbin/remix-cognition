@@ -11,7 +11,6 @@ function lessonContent () {
     started.push(lessonID)
   }
   store.set('started', started)
-  // document.getElementById('lessonContent').innerHTML = lessonName
   const ol = document.getElementById('lessonPages')
 
   // file I/O
