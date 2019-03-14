@@ -22,14 +22,9 @@ function loadProgress () {
   const stNum = viArr.length
   const unNum = totalLessons - stNum - fiNum
 
-  // When click 'Set User' link
-  document.getElementById('set').addEventListener('click', function () {
-    store.set('started', 0)
-    store.set('finished', 0)
-    store.set('unstarted', 0)
-    store.set('examsFinished', 0)
-    window.location.reload()
-  })
+  // Put lessons left on screen
+  var lessonsLeftDiv = document.getElementById('unstartedLessons')
+  lessonsLeftDiv.innerHTML = unNum
 
   // Add pie chart
   var ctx = document.getElementById('progChart').getContext('2d')
@@ -63,7 +58,99 @@ function loadProgress () {
   })
   progChart.update()
 
+  // Get quiz data for chart
+  var quizzes = store.get('quizzes')
+  var labels = []
+  var data = []
+  var backgroundColor = []
+  for (var q in quizzes) {
+    var quiz = quizzes[q]
+    labels.push('Quiz ' + q)
+    var percent = Math.floor(100 * quiz.numCorrect / quiz.numQuestions)
+    console.log(quiz.numCorrect)
+    data.push(percent)
+    if (percent > 85) {
+      backgroundColor.push('#5F6BD1')
+    } else if (percent > 75) {
+      backgroundColor.push('#373979')
+    } else {
+      backgroundColor.push('#1C2035')
+    }
+  }
+  console.log(labels)
+  console.log(data)
+  console.log(backgroundColor)
   // Add bar chart
-  // var ctx = document.getElementById('quizChart').getContext('2d')
+  ctx = document.getElementById('quizChart').getContext('2d')
+  var quizChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColor,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      tooltips: {
+        'enabled': false
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            color: '#1C2035',
+            drawBorder: false,
+            lineWidth: 2
+          },
+          ticks: {
+            fontColor: '#EAEAEA',
+            fontStyle: 'Bold',
+            fontSize: '16'
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            color: '#1C2035',
+            drawBorder: false,
+            lineWidth: 2
+          },
+          ticks: {
+            fontColor: '#EAEAEA',
+            fontStyle: 'Bold',
+            fontSize: '16',
+            suggestedMin: 0,
+            suggestedMax: 100
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      hover: {
+        animationDuration: 1
+      },
+      animation: {
+        duration: 1,
+        onComplete: function () {
+          var chartInstance = this.chart
+
+          var ctx = chartInstance.ctx
+          ctx.textAlign = 'center'
+          ctx.fillStyle = '#EAEAEA'
+          ctx.textBaseline = 'bottom'
+
+          this.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i)
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index]
+              ctx.fillText(data, bar._model.x - 25, bar._model.y + 9)
+            })
+          })
+        }
+      }
+    }
+  })
+  quizChart.update()
 }
 loadProgress()
