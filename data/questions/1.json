@@ -25,5 +25,46 @@
       "Class",
       "Variables"
     ]
+  },
+  {
+    "text" : "What surrounds the class body",
+    "answers" : [
+      "Braces {}",
+      "Parenthesis ()",
+      "Brackets []",
+      "Angle brackets <>"
+    ]
+  },
+  {
+    "text" : "When is the 'new' keyword used",
+    "answers" : [
+      "When initializing an object",
+      "When declaring a class",
+      "To give a field a new value"
+    ]
+  },
+  {
+    "text" : "What kind of variable is 'radius' in public Circle(int radius)",
+    "answers" : [
+      "Parameter",
+      "Local variable",
+      "Field"
+    ]
+  },
+  {
+    "text" : "What kind of variable is located at the beginning of a class",
+    "answers" : [
+      "Field",
+      "Local variable",
+      "Parameter"
+    ]
+  },
+  {
+    "text" : "What kind of variable is located inside the body of a method",
+    "answers" : [
+      "Local variable",
+      "Field",
+      "Parameter"
+    ]
   }
 ]
