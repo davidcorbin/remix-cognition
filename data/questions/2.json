@@ -1,29 +1,47 @@
 [
   {
-    "text" : "How many objects instances can you create from a class?",
+    "text" : "In the method declaration, what goes before the method name",
     "answers" : [
-      "Infinitely many object instances can be created from one class.",
-      "Only one object can be created per class.",
-      "You can only create a set number of objects per class, this number is defined in the class.",
-      "You can create only one object instance per constructor in the class."
+      "The return type",
+      "The access modifier",
+      "The parameter list",
+      "The method body"
     ]
   },
   {
-    "text" : "Which of the following determines the functions of an object",
+    "text" : "In the method declaration, what goes inside the parenthesis",
     "answers" : [
-      "Methods",
-      "Constructors",
-      "Class",
-      "Variables"
+      "The parameter list",
+      "The access modifier",
+      "The return type",
+      "The method body"
     ]
   },
   {
-    "text" : "Which of the following sets up an instance of the object",
+    "text" : "Which of the following should be used as a method name",
     "answers" : [
-      "Constructors",
-      "Methods",
-      "Class",
-      "Variables"
+      "bigBox",
+      "BigBox",
+      "bigbox",
+      "Box"
+    ]
+  },
+  {
+    "text" : "Which of the following is a valid parameter list for a method declaration",
+    "answers" : [
+      "methodName(int param1, int param2)",
+      "methodName(param)",
+      "methodName(param1, param2)",
+      "methodName(int param1; int"
+    ]
+  },
+  {
+    "text" : "What must be unique for every overloaded method",
+    "answers" : [
+      "The number or type of parameters",
+      "The method name",
+      "The access modifier",
+      "The return type"
     ]
   }
 ]
