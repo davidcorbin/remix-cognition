@@ -7,7 +7,8 @@
     "start": "electron .",
     "pretest": "standard -v | snazzy && htmlhint",
     "test": "mocha",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dist-all": "electron-builder -mw"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,7 @@
     "electron-store": "^2.0.0"
   },
   "build": {
-    "appId": "com.electron.${name}",
+    "appId": "com.electron.remix-cognition",
     "productName": "Remix Cognition",
     "directories": {
       "output": "dist"
@@ -52,7 +53,11 @@
       "data/**/*"
     ],
     "mac": {
+      "target": "dmg",
       "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "target": "portable"
     }
   }
 }
