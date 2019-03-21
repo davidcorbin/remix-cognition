@@ -66,5 +66,30 @@
       "Field",
       "Parameter"
     ]
+  },
+  {
+    "text" : "What kind of variable belongs to the class instead of a specific instance of that class",
+    "answers" : [
+      "Static variable",
+      "Public vairable",
+      "Fields",
+      "Getters"
+    ]
+  },
+  {
+    "text" : "Java objects need to be deleted once they are no longer being used",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "What are the components of a field declaration",
+    "answers" : [
+      "Modifiers, data type, and name",
+      "Data type and name",
+      "Scope level and name",
+      "Size, data type, and name"
+    ]
   }
 ]
