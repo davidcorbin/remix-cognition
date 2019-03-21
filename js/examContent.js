@@ -2,8 +2,11 @@ function quizContent () {
   let Store = require('electron-store')
   let store = new Store()
 
+  const DataFile = require('./js/DataFile.js')
+  const df = new DataFile()
+
   // Get Section information
-  const SECTION_FILE = './data/sections.json'
+  const SECTION_FILE = df.getSectionsFile()
   const fs = require('fs')
   const SECTION_DATA = JSON.parse(fs.readFileSync(SECTION_FILE))
 
@@ -34,7 +37,7 @@ function quizContent () {
     // TODO: Check if quiz already taken
 
     // Get Questions from examID.json
-    questionFile = './data/questions/' + examID + '.json'
+    questionFile = df.getQuestionsFile(examID)
     questionData = JSON.parse(fs.readFileSync(questionFile))
     questionShuffled = JSON.parse(fs.readFileSync(questionFile))
     questionShuffled.forEach(function (question) {

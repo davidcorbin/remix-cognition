@@ -3,8 +3,11 @@ function loadProgress () {
   let Store = require('electron-store')
   let store = new Store()
 
+  const DataFile = require('./js/DataFile.js')
+  const df = new DataFile()
+
   // Get total number of lessons, to show on pie chart
-  const LESSON_FILE = './data/lessons/lessons.json'
+  const LESSON_FILE = df.getLessonFile()
   const fs = require('fs')
   const LESSON_DATA = JSON.parse(fs.readFileSync(LESSON_FILE))
   const totalLessons = Object.keys(LESSON_DATA).length

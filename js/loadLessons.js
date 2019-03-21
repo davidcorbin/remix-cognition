@@ -1,6 +1,9 @@
-const LESSON_FILE = './data/lessons/lessons.json'
-const SECTIONS_FILE = './data/sections.json'
 const fs = require('fs')
+const DataFile = require('./js/DataFile.js')
+const df = new DataFile()
+
+const LESSON_FILE = df.getLessonFile()
+const SECTIONS_FILE = df.getSectionsFile()
 
 function getLessons () {
   let rawdata = fs.readFileSync(LESSON_FILE)
