@@ -32,7 +32,7 @@
       "methodName(int param1, int param2)",
       "methodName(param)",
       "methodName(param1, param2)",
-      "methodName(int param1; int"
+      "methodName(int param1; int)"
     ]
   },
   {
@@ -42,6 +42,45 @@
       "The method name",
       "The access modifier",
       "The return type"
+    ]
+  },
+  {
+    "text" : "Method overloading allows a method to behave differently for different data types",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "The folllowing is a valid method call: setBalance(int newBalance)",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "What does it mean to pass a variable to a method by value",
+    "answers" : [
+      "A copy of the variable is made so any modifications are made to the copy instead of original variable",
+      "A backup is made of the variable so when the method returns, the variable can be reset",
+      "The variable becomes final and cannot be modified within the method",
+      "The value of the variable is used to tell the method where it is stored in memory"
+    ]
+  },
+  {
+    "text" : "Java passes objects by reference instead of by value",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "Why can an object passed to a method be modified within that method",
+    "answers" : [
+      "Because it is the reference to the object that is passed",
+      "Because it is passed by value so its values can be changed",
+      "Because when the method returns the copy of the object is used to overwrite the original object",
+      "It cannot be modified since it is passed by value"
     ]
   }
 ]
