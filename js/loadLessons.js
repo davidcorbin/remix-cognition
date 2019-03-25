@@ -41,8 +41,8 @@ function loadLessons () {
   if (!Array.isArray(lessonsStarted) || !lessonsStarted.length) { lessonsStarted = [] }
   var lessonsFinished = store.get('finished')
   if (!Array.isArray(lessonsFinished) || !lessonsFinished.length) { lessonsFinished = [] }
-  var examsFinished = store.get('examsFinished')
-  if (!Array.isArray(examsFinished) || !examsFinished.length) { examsFinished = [] }
+  var exams = Object.keys(store.get('exams'))
+  if (!Array.isArray(exams) || !exams.length) { exams = [] }
   let allLessons = getLessons()
   let allSections = getSections()
 
@@ -100,7 +100,7 @@ function loadLessons () {
         examButton.onclick = function () {
           window.location.href = 'exam.html#' + section.id
         }
-        if (examsFinished.includes(section.id.toString())) {
+        if (exams.includes(section.id.toString())) {
           examButton.className = 'finished'
         }
         examButton.innerHTML = 'Exam ' + section.id

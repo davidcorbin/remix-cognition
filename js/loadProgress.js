@@ -155,5 +155,100 @@ function loadProgress () {
     }
   })
   quizChart.update()
+
+  // Get quiz data for chart
+  var exams = store.get('exams')
+  labels = []
+  data = []
+  backgroundColor = []
+  for (q in exams) {
+    var exam = exams[q]
+    labels.push('Exam ' + q)
+    percent = Math.floor(100 * exam.numCorrect / exam.numQuestions)
+    console.log(exam.numCorrect)
+    data.push(percent)
+    if (percent > 85) {
+      backgroundColor.push('#5F6BD1')
+    } else if (percent > 75) {
+      backgroundColor.push('#373979')
+    } else {
+      backgroundColor.push('#1C2035')
+    }
+  }
+  console.log(labels)
+  console.log(data)
+  console.log(backgroundColor)
+  // Add bar chart
+  ctx = document.getElementById('examChart').getContext('2d')
+  var examChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColor,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      tooltips: {
+        'enabled': false
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            color: '#1C2035',
+            drawBorder: false,
+            lineWidth: 2
+          },
+          ticks: {
+            fontColor: '#EAEAEA',
+            fontStyle: 'Bold',
+            fontSize: '16'
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            color: '#1C2035',
+            drawBorder: false,
+            lineWidth: 2
+          },
+          ticks: {
+            fontColor: '#EAEAEA',
+            fontStyle: 'Bold',
+            fontSize: '16',
+            suggestedMin: 0,
+            suggestedMax: 100
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      hover: {
+        animationDuration: 1
+      },
+      animation: {
+        duration: 1,
+        onComplete: function () {
+          var chartInstance = this.chart
+
+          var ctx = chartInstance.ctx
+          ctx.textAlign = 'center'
+          ctx.fillStyle = '#EAEAEA'
+          ctx.textBaseline = 'bottom'
+
+          this.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i)
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index]
+              ctx.fillText(data, bar._model.x - 25, bar._model.y + 9)
+            })
+          })
+        }
+      }
+    }
+  })
+  examChart.update()
 }
 loadProgress()
