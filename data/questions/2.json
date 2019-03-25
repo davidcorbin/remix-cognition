@@ -68,10 +68,10 @@
     ]
   },
   {
-    "text" : "Java passes objects by reference instead of by value",
+    "text" : "Java uses references when passing objects",
     "answers" : [
-      "False",
-      "True"
+      "True",
+      "False"
     ]
   },
   {
