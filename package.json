@@ -1,6 +1,6 @@
 {
   "name": "remix-cognition",
-  "version": "0.1.2",
+  "version": "1.0.2",
   "description": "CAI app from COMP350",
   "main": "js/main.js",
   "scripts": {
