@@ -1,12 +1,14 @@
 {
   "name": "remix-cognition",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "CAI app from COMP350",
   "main": "js/main.js",
   "scripts": {
     "start": "electron .",
     "pretest": "standard -v | snazzy && htmlhint",
-    "test": "mocha"
+    "test": "mocha",
+    "dist": "electron-builder",
+    "dist-all": "electron-builder -mw"
   },
   "repository": {
     "type": "git",
@@ -19,10 +21,9 @@
   },
   "homepage": "https://github.com/davidcorbin/remix-cognition#readme",
   "devDependencies": {
-    "chart.js": "^2.7.3",
     "electron": "^4.0.8",
-    "electron-builder": "^20.38.5",
-    "electron-store": "^2.0.0",
+    "electron-reload": "^1.4.0",
+    "electron-builder": "^20.39.0",
     "htmlhint": "^0.11.0",
     "mocha": "^6.0.2",
     "snazzy": "^8.0.0",
@@ -36,6 +37,27 @@
     ]
   },
   "dependencies": {
-    "electron-reload": "^1.4.0"
+    "chart.js": "^2.7.3",
+    "electron-store": "^2.0.0"
+  },
+  "build": {
+    "appId": "com.electron.remix-cognition",
+    "productName": "Remix Cognition",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "extraResources": [
+      "data/**/*"
+    ],
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "target": "portable"
+    }
   }
 }
