@@ -1,6 +1,6 @@
 {
   "name": "remix-cognition",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "CAI app from COMP350",
   "main": "js/main.js",
   "scripts": {
@@ -8,13 +8,16 @@
     "pretest": "standard -v | snazzy && htmlhint",
     "test": "mocha",
     "dist": "electron-builder",
-    "dist-all": "electron-builder -mw"
+    "dist-all": "electron-builder -mwl"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davidcorbin/remix-cognition.git"
   },
-  "author": "",
+  "author": {
+    "name": "Group4",
+    "email": "mph121@users.noreply.github.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/davidcorbin/remix-cognition/issues"
@@ -58,6 +61,9 @@
     },
     "win": {
       "target": "portable"
+    },
+    "linux": {
+      "target": ["deb", "tar.gz"]
     }
   }
 }
