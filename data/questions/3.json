@@ -59,5 +59,23 @@
       "Its reference number is printed",
       "All of its fields are printed"
     ]
+  },
+  {
+    "text" : "What happens when you call .equals() on an object if you have not overrided the the .equals() function",
+    "answers" : [
+      "It compares the addresses of the two objects",
+      "It compares the data inside the two objects",
+      "It throws an exception",
+      "The program crashes"
+    ]
+  },
+  {
+    "text" : "What do you have to be careful about when using the default .clone() method in an object that implements the Cloneable interface",
+    "answers" : [
+      "You need to be careful that the object does not contain a referance to an external object",
+      "It does not create a new object, it only clones the address",
+      "You need to make sure the object is clone-safe so it does not throw a CloneNotSupportedException",
+      "Since clone() returns a default Object you need to cast it to your Cloneable object"
+    ]
   }
 ]
