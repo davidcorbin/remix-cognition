@@ -56,12 +56,20 @@
     ]
   },
   {
-    "name": "Constructors",
+    "name": "Special Methods",
     "id": 3,
     "sources": [
       {
         "title": "Constructors",
         "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html"
+      },
+      {
+        "title": "String Comparison",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/comparestrings.html"
+      },
+      {
+        "title": "Other Object Methods",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html"
       }
     ]
   }
