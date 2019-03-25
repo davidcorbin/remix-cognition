@@ -10,7 +10,7 @@ function quizContent () {
   const fs = require('fs')
   const SECTION_DATA = JSON.parse(fs.readFileSync(SECTION_FILE))
 
-  var questionFile, questionData, questionShuffled
+  var questionFile, lessonQuestions, questionData, answerData
   var examDone = false
 
   // Get quiz/exam number and set title
@@ -26,6 +26,9 @@ function quizContent () {
 
   let questionsContent = document.getElementById('questions')
 
+  questionData = []
+  answerData = []
+
   if (isQuiz) {
     // Set button to go to lesson
     document.getElementById('gotoLesson').addEventListener('click', function () {
@@ -39,53 +42,67 @@ function quizContent () {
     // Get Questions from examID.json
     questionFile = df.getQuestionsFile(examID)
     questionData = JSON.parse(fs.readFileSync(questionFile))
-    questionShuffled = JSON.parse(fs.readFileSync(questionFile))
-    questionShuffled.forEach(function (question) {
-      console.log(question.answers[0])
-      question.answers = shuffle(question.answers)
-      var box = document.createElement('div')
-      box.className = 'question-box'
-
-      var text = document.createElement('div')
-      text.innerHTML = question.text
-      text.className = 'question-text'
-      box.append(text)
-
-      question.answers.forEach(function (answer) {
-        var answerDiv = document.createElement('div')
-        answerDiv.addEventListener('click', function () {
-          if (examDone) {
-            return
-          }
-          if (this.className.includes('chosen') || this.className.includes('disabled')) {
-            // If clicked other answer, change answer
-            this.parentElement.childNodes.forEach(function (sibling) {
-              sibling.className = sibling.className.replace(' chosen', '')
-              sibling.className = sibling.className.replace(' disabled', '')
-            })
-          }
-          this.className = this.className + ' chosen'
-          this.parentElement.childNodes.forEach(function (sibling) {
-            if (!sibling.className.includes('chosen')) {
-              sibling.className += ' disabled'
-            }
-          })
-        })
-        answerDiv.className = 'question-answer'
-        answerDiv.innerHTML = answer
-        box.append(answerDiv)
-      })
-
-      questionsContent.append(box)
-    })
   } else {
     // Get questions from lessons specified in sections.json
     // This line is a bit sketch, we should have better way of getting the element of array
     var lessonsCovered = SECTION_DATA.sections[examID - 1].lessons
     console.log(lessonsCovered)
-    document.getElementById('lessonsCovered').innerHTML = 'Lessons Covered: ' + lessonsCovered
-    questionsContent.innerHTML = 'Working on exams...'
+
+    document.getElementById('gotoLesson').addEventListener('click', function () {
+      window.location = './lesson.html#' + lessonsCovered[0]
+    })
+
+    lessonsCovered.forEach((lesson) => {
+      questionFile = df.getQuestionsFile(lesson)
+      lessonQuestions = JSON.parse(fs.readFileSync(questionFile))
+      console.log(lessonQuestions)
+      lessonQuestions = shuffle(lessonQuestions)
+      lessonQuestions = lessonQuestions.slice(0, 5)
+      questionData = questionData.concat(lessonQuestions)
+    })
+    console.log(questionData)
   }
+
+  questionData.forEach(function (question) {
+    console.log(question.answers[0])
+    answerData.push(question.answers[0])
+    question.answers = shuffle(question.answers)
+    var box = document.createElement('div')
+    box.className = 'question-box'
+
+    var text = document.createElement('div')
+    text.innerHTML = question.text
+    text.className = 'question-text'
+    box.append(text)
+
+    question.answers.forEach(function (answer) {
+      var answerDiv = document.createElement('div')
+      answerDiv.addEventListener('click', function () {
+        if (examDone) {
+          return
+        }
+        if (this.className.includes('chosen') || this.className.includes('disabled')) {
+          // If clicked other answer, change answer
+          this.parentElement.childNodes.forEach(function (sibling) {
+            sibling.className = sibling.className.replace(' chosen', '')
+            sibling.className = sibling.className.replace(' disabled', '')
+          })
+        }
+        this.className = this.className + ' chosen'
+        this.parentElement.childNodes.forEach(function (sibling) {
+          if (!sibling.className.includes('chosen')) {
+            sibling.className += ' disabled'
+          }
+        })
+      })
+      answerDiv.className = 'question-answer'
+      answerDiv.innerHTML = answer
+      box.append(answerDiv)
+    })
+
+    questionsContent.append(box)
+  })
+  console.log(questionData)
 
   document.getElementById('finishExam').addEventListener('click', function () {
     // Get chosen answers into an array
@@ -121,7 +138,7 @@ function quizContent () {
     for (var i = 0; i < chosenAnswers.length; i++) {
       // Get the right answer
       var answer = chosenAnswers[i]
-      var correct = questionData[i].answers[0]
+      var correct = answerData[i]
       var question = questionBoxes.item(i)
 
       // Check if each answer is right
@@ -153,7 +170,22 @@ function quizContent () {
     result['correctAnswers'] = correctResponse
     result['numCorrect'] = correctNum
     result['numQuestions'] = chosenAnswers.length
-    store.set('quizzes.' + examID, result)
+    if (isQuiz) {
+      store.set('quizzes.' + examID, result)
+      var started = store.get('started')
+      if (!Array.isArray(started) || !started.length) { started = [] }
+      let filtered = started.filter(lesson => lesson !== examID)
+      store.set('started', filtered)
+
+      var finished = store.get('finished')
+      if (!Array.isArray(finished) || !finished.length) { finished = [] }
+      if (!finished.includes(examID.toString())) {
+        finished.push(examID)
+      }
+      store.set('finished', finished)
+    } else {
+      store.set('exams.' + examID, result)
+    }
 
     // Display Result
     var resultDiv = document.getElementById('results')

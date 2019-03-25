@@ -40,22 +40,11 @@ function lessonContent () {
     }
   })
 
-  document.getElementById('finishLesson').addEventListener('click', function () {
-    var started = store.get('started')
-    if (!Array.isArray(started) || !started.length) { started = [] }
-    let filtered = started.filter(lesson => lesson !== lessonID)
-    store.set('started', filtered)
-    var finished = store.get('finished')
-    if (!Array.isArray(finished) || !finished.length) { finished = [] }
-    if (!finished.includes(lessonID.toString())) {
-      finished.push(lessonID)
-    }
-    store.set('finished', finished)
-    window.location.href = 'index.html'
-  })
-
-  document.getElementById('gotoQuiz').addEventListener('click', function () {
-    window.location.href = 'exam.html#Q' + lessonID
-  })
+  let quizBtns = document.getElementsByClassName('gotoQuiz')
+  for (var btn of quizBtns) {
+    btn.addEventListener('click', () => {
+      window.location.href = 'exam.html#Q' + lessonID
+    })
+  }
 }
 lessonContent()
