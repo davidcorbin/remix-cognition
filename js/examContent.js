@@ -46,23 +46,41 @@ function quizContent () {
     // Get questions from lessons specified in sections.json
     // This line is a bit sketch, we should have better way of getting the element of array
     var lessonsCovered = SECTION_DATA.sections[examID - 1].lessons
-    console.log(lessonsCovered)
 
+    // Check if previous quizzes have been taken or not
+    let checkQuizzes = 0
+    let quizData = Object.keys(store.get('quizzes'))
+    for (var l in lessonsCovered) {
+      if (!quizData.includes(lessonsCovered[l].toString())) {
+        checkQuizzes = lessonsCovered[l]
+        break
+      }
+    }
+
+    // Add handler to go to lesson page from quiz
     document.getElementById('gotoLesson').addEventListener('click', function () {
       window.location = './lesson.html#' + lessonsCovered[0]
     })
 
+    // If previous quizzes havent been taken, prevent user from taking exam
+    if (checkQuizzes !== 0) {
+      let errorDisp = document.getElementById('errorDisp')
+      errorDisp.innerHTML = 'Please finish quiz ' + checkQuizzes + ' first.'
+      document.getElementById('finishExam').className += ' hidden'
+      return
+    }
+
+    // Get questions from each relevant lesson
     lessonsCovered.forEach((lesson) => {
       questionFile = df.getQuestionsFile(lesson)
       lessonQuestions = JSON.parse(fs.readFileSync(questionFile))
-      console.log(lessonQuestions)
       lessonQuestions = shuffle(lessonQuestions)
-      lessonQuestions = lessonQuestions.slice(0, 5)
+      lessonQuestions = lessonQuestions.slice(0, 5) // Get 5 questions
       questionData = questionData.concat(lessonQuestions)
     })
-    console.log(questionData)
   }
 
+  // Add each question
   questionData.forEach(function (question) {
     console.log(question.answers[0])
     answerData.push(question.answers[0])
@@ -70,11 +88,13 @@ function quizContent () {
     var box = document.createElement('div')
     box.className = 'question-box'
 
+    // Put question text in the html element
     var text = document.createElement('div')
     text.innerHTML = question.text
     text.className = 'question-text'
     box.append(text)
 
+    // Put shuffled answers under question
     question.answers.forEach(function (answer) {
       var answerDiv = document.createElement('div')
       answerDiv.addEventListener('click', function () {
@@ -102,8 +122,8 @@ function quizContent () {
 
     questionsContent.append(box)
   })
-  console.log(questionData)
 
+  // Add handler for finish button
   document.getElementById('finishExam').addEventListener('click', function () {
     // Get chosen answers into an array
     const chosenDivs = document.getElementsByClassName('chosen')
@@ -111,7 +131,6 @@ function quizContent () {
     for (var div of chosenDivs) {
       chosenAnswers.push(div.innerHTML)
     }
-    console.log(chosenAnswers)
 
     // Get question boxes
     const questionBoxes = document.getElementsByClassName('question-box')
@@ -193,16 +212,9 @@ function quizContent () {
       ': ' + Math.floor(100 * correctNum / chosenAnswers.length) + '%'
     var homeButton = document.getElementById('goHome')
     homeButton.className = homeButton.className.replace(' hidden', '')
-
-    // var finished = store.get('examsFinished')
-    // if (!Array.isArray(finished) || !finished.length) { finished = [] }
-    // if (!finished.includes(examID.toString())) {
-    //   finished.push(examID)
-    // }
-    // store.set('examsFinished', finished)
-    // window.location.href = 'index.html'
   })
 }
+
 // Fisher-Yates Shuffle
 function shuffle (array) {
   var currentIndex = array.length; var temporaryValue; var randomIndex

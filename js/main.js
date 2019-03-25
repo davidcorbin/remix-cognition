@@ -15,6 +15,7 @@ function createWindow () {
       nodeIntegration: true
     }
   })
+  mainWindow.setMenuBarVisibility(false)
 
   // and load the index.html of the app.
   mainWindow.loadFile('splash.html')

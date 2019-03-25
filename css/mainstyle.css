@@ -8,7 +8,12 @@
 	--chosen-grey: #2A3059;
 	--correct: #20B81B;
 	--incorrect: #D40505;
-	--sidebar-width: 200px;
+	--sidebar-width: 250px;
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(fonts/HelveticaNeue.ttf);
 }
 
 body {

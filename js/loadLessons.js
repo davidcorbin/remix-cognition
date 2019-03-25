@@ -41,8 +41,13 @@ function loadLessons () {
   if (!Array.isArray(lessonsStarted) || !lessonsStarted.length) { lessonsStarted = [] }
   var lessonsFinished = store.get('finished')
   if (!Array.isArray(lessonsFinished) || !lessonsFinished.length) { lessonsFinished = [] }
-  var exams = Object.keys(store.get('exams'))
-  if (!Array.isArray(exams) || !exams.length) { exams = [] }
+  var examObj = (store.get('exams'))
+  var exams
+  if (examObj) {
+    exams = Object.keys(examObj)
+  } else {
+    exams = []
+  }
   let allLessons = getLessons()
   let allSections = getSections()
 
