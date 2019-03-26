@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Remix Cognition</title>
+    <link rel="stylesheet" href="css/mainstyle.css"/>
+    <link rel="stylesheet" href="css/exam.css" />
+  </head>
+  <body class="noselect">
+    <div class="navbar">
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-middle">
+        <h1 id="examTitle"></h1>
+      </div>
+      <div class="nav-right">
+        <a id="gotoLesson">Lesson</a>
+      </div>
+    </div>
+    <span id="lessonsCovered"></span>
+    <div id="questions"></div>
+    <div class="errorDiv"><p id="errorDisp">&nbsp;</p></div>
+    <div class="resultsDiv"><p id="results"></p></div>
+    <div class="actionButton"><a id="finishExam">Finish</a></div>
+    <div id="goHome" class="actionButton hidden"><a href="index.html">Go Home</a></div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <script type="text/javascript" src="js/examContent.js"></script>
+  </body>
+</html>

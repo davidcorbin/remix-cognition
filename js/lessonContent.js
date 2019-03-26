@@ -2,6 +2,11 @@ function lessonContent () {
   let Store = require('electron-store')
   let store = new Store()
 
+  const DataFile = require('./js/DataFile.js')
+  const df = new DataFile()
+
+  const LESSON_FILE = df.getLessonFile()
+
   var lessonID = window.location.hash.substring(1)
   var started = store.get('started')
   var finished = store.get('finished')
@@ -11,12 +16,11 @@ function lessonContent () {
     started.push(lessonID)
   }
   store.set('started', started)
-  // document.getElementById('lessonContent').innerHTML = lessonName
   const ol = document.getElementById('lessonPages')
 
   // file I/O
   const fs = require('fs')
-  let rawdata = fs.readFileSync('./data/lessons/lessons.json')
+  let rawdata = fs.readFileSync(LESSON_FILE)
   let allLessons = JSON.parse(rawdata)
   allLessons.forEach(function (element) {
     if (element.id.toString() === lessonID) {
@@ -36,18 +40,11 @@ function lessonContent () {
     }
   })
 
-  document.getElementById('finishLesson').addEventListener('click', function () {
-    var started = store.get('started')
-    if (!Array.isArray(started) || !started.length) { started = [] }
-    let filtered = started.filter(lesson => lesson !== lessonID)
-    store.set('started', filtered)
-    var finished = store.get('finished')
-    if (!Array.isArray(finished) || !finished.length) { finished = [] }
-    if (!finished.includes(lessonID.toString())) {
-      finished.push(lessonID)
-    }
-    store.set('finished', finished)
-    window.location.href = 'index.html'
-  })
+  let quizBtns = document.getElementsByClassName('gotoQuiz')
+  for (var btn of quizBtns) {
+    btn.addEventListener('click', () => {
+      window.location.href = 'exam.html#Q' + lessonID
+    })
+  }
 }
 lessonContent()

@@ -1,0 +1,90 @@
+body {
+	padding-bottom: 30px;
+}
+
+#questions {
+	text-align: center;
+	margin: 0 auto;
+	width: 70%;
+	counter-reset: questionNum;
+}
+
+.question-box {
+	text-align: justify;
+	margin: 30px;
+	background: var(--main-lighter);
+	padding: 15px;
+	border-radius: 7px;
+}
+
+.question-text::before {
+	counter-increment: questionNum;
+	content: counter(questionNum)".";
+	margin-right: 7px;
+	font-weight: 900;
+}
+
+.question-text {
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 17px;
+	counter-reset: answerNum;
+}
+
+.question-text::after {
+	content: "?";
+}
+
+.question-answer::before {
+	counter-increment: answerNum;
+	content: counter(answerNum, upper-alpha)".";
+	margin-right: 7px;
+	font-weight: 800;
+}
+
+.question-answer {
+	padding: 6px;
+	margin: 2px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.question-answer > a {
+	text-decoration: none;
+	text-align: justify-all;
+}
+
+.question-answer:not(.disabled):not(.chosen):not(.correct):not(.incorrect):hover {
+	background: var(--button-hover);
+}
+
+.question-answer.disabled {
+	opacity: 0.3;
+}
+
+.question-answer.chosen {
+	background: var(--chosen-grey);
+}
+
+.question-answer.correct {
+	background: var(--correct)
+}
+
+.question-answer.incorrect {
+	background: var(--incorrect)
+}
+
+.errorDiv {
+	align-items: center;
+	text-align: center;
+	font-style: italic;
+	font-weight: 600;
+	opacity: 0.5;
+}
+
+.resultsDiv {
+	align-items: center;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+}

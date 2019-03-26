@@ -1,0 +1,29 @@
+[
+  {
+    "text" : "How many objects instances can you create from a class?",
+    "answers" : [
+      "Infinitely many object instances can be created from one class.",
+      "Only one object can be created per class.",
+      "You can only create a set number of objects per class, this number is defined in the class.",
+      "You can create only one object instance per constructor in the class."
+    ]
+  },
+  {
+    "text" : "Which of the following determines the functions of an object",
+    "answers" : [
+      "Methods",
+      "Constructors",
+      "Class",
+      "Variables"
+    ]
+  },
+  {
+    "text" : "Which of the following sets up an instance of the object",
+    "answers" : [
+      "Constructors",
+      "Methods",
+      "Class",
+      "Variables"
+    ]
+  }
+]

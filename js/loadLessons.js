@@ -1,14 +1,16 @@
-const LESSON_FILE = './data/lessons/lessons.json'
-const SECTIONS_FILE = './data/sections.json'
+const fs = require('fs')
+const DataFile = require('./js/DataFile.js')
+const df = new DataFile()
+
+const LESSON_FILE = df.getLessonFile()
+const SECTIONS_FILE = df.getSectionsFile()
 
 function getLessons () {
-  const fs = require('fs')
   let rawdata = fs.readFileSync(LESSON_FILE)
   return JSON.parse(rawdata)
 }
 
 function getSections () {
-  const fs = require('fs')
   let rawdata = fs.readFileSync(SECTIONS_FILE)
   return JSON.parse(rawdata)
 }
@@ -35,52 +37,82 @@ function loadLessons () {
   let Store = require('electron-store')
   let store = new Store()
 
-  var started = store.get('started')
-  if (!Array.isArray(started) || !started.length) { started = [] }
-  var finished = store.get('finished')
-  if (!Array.isArray(finished) || !finished.length) { finished = [] }
+  var lessonsStarted = store.get('started')
+  if (!Array.isArray(lessonsStarted) || !lessonsStarted.length) { lessonsStarted = [] }
+  var lessonsFinished = store.get('finished')
+  if (!Array.isArray(lessonsFinished) || !lessonsFinished.length) { lessonsFinished = [] }
+  var examObj = (store.get('exams'))
+  var exams
+  if (examObj) {
+    exams = Object.keys(examObj)
+  } else {
+    exams = []
+  }
   let allLessons = getLessons()
   let allSections = getSections()
 
   const sidebarConnectors = document.getElementById('sidebar-connectors')
-  const ol = document.getElementById('lessons')
+  const content = document.getElementById('lessons')
 
   // For each lesson in the sidebar
-  allLessons.forEach(function (element, i) {
+  allLessons.forEach(function (lesson, i) {
+    // ADDING LESSONS
     // For each section in the section list
     allSections.sections.forEach(function (section, j) {
       if (section.lessons.includes(i + 1)) {
         // Create connector
         const connector = getConnectorElement()
         sidebarConnectors.append(connector)
-
-        if (section.lessons[section.lessons.length - 1] === i + 1) {
-          // Create connector spacer
-          const spacer = getConnectorSpacerBetweenSectionElement()
-          sidebarConnectors.append(spacer)
-        } else {
-          const spacer = getConnectorSpacerInSectionElement()
-          sidebarConnectors.append(spacer)
-        }
+        const spacer = getConnectorSpacerInSectionElement()
+        sidebarConnectors.append(spacer)
       }
     })
 
-    const li = document.createElement('div')
-    const listButton = document.createElement('a')
+    const lessonDiv = document.createElement('div')
+    const lessonButton = document.createElement('a')
 
     // Set class based on whether the lesson is started or finished
-    if (started.includes(element.id.toString())) { listButton.className = 'started' }
-    if (finished.includes(element.id.toString())) { listButton.className = 'finished' }
+    if (lessonsStarted.includes(lesson.id.toString())) { lessonButton.className = 'started' }
+    if (lessonsFinished.includes(lesson.id.toString())) { lessonButton.className = 'finished' }
 
     // Set hyperlink
-    listButton.onclick = function () {
-      window.location.href = 'lesson.html#' + element.id
+    lessonButton.onclick = function () {
+      window.location.href = 'lesson.html#' + lesson.id
     }
 
-    listButton.innerHTML = element.name
-    li.appendChild(listButton)
-    ol.appendChild(li)
+    lessonButton.innerHTML = lesson.name
+    lessonDiv.appendChild(lessonButton)
+    content.appendChild(lessonDiv)
+
+    // ADDING EXAMS
+    // Add the appropriate exams after the lesson
+    allSections.sections.forEach(function (section) {
+      // Check the last ID to determine placement
+      if (section.lessons[section.lessons.length - 1] === i + 1) {
+        allSections.sections.forEach(function (section, j) {
+          if (section.lessons.includes(i + 1)) {
+            // Create connector
+            const connector = getConnectorElement()
+            sidebarConnectors.append(connector)
+            // Create connector spacer
+            const spacer = getConnectorSpacerBetweenSectionElement()
+            sidebarConnectors.append(spacer)
+          }
+        })
+        const examDiv = document.createElement('div')
+        const examButton = document.createElement('a')
+        // Set hyperlink
+        examButton.onclick = function () {
+          window.location.href = 'exam.html#' + section.id
+        }
+        if (exams.includes(section.id.toString())) {
+          examButton.className = 'finished'
+        }
+        examButton.innerHTML = 'Exam ' + section.id
+        examDiv.appendChild(examButton)
+        content.appendChild(examDiv)
+      }
+    })
   })
 }
-
 loadLessons()
