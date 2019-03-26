@@ -52,7 +52,7 @@
     ]
   },
   {
-    "text" : "The folllowing is a valid method call: setBalance(int newBalance)",
+    "text" : "The following is a valid method call: setBalance(int newBalance)",
     "answers" : [
       "False",
       "True"

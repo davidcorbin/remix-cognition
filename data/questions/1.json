@@ -71,7 +71,7 @@
     "text" : "What kind of variable belongs to the class instead of a specific instance of that class",
     "answers" : [
       "Static variable",
-      "Public vairable",
+      "Public variable",
       "Fields",
       "Getters"
     ]
