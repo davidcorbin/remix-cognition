@@ -1,7 +1,81 @@
 [
   {
-    "name": "Classes",
+    "name": "Variables",
     "id": 1,
+    "sources": [
+      {
+        "title": "Variables",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html"
+      },
+      {
+        "title": "Primitive Data Types",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"
+      },
+      {
+        "title": "Arrays",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html"
+      }
+    ]
+  },
+  {
+    "name": "Operators",
+    "id": 2,
+    "sources": [
+      {
+        "title": "Operators",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html"
+      },
+      {
+        "title": "Operators Part 1",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html"
+      },
+      {
+        "title": "Operators Part 2",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html"
+      },
+      {
+        "title": "Bitwise Operators",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html"
+      },
+      {
+        "title": "Expresions",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/expressions.html"
+      }
+    ]
+  },
+  {
+    "name": "Control Flow",
+    "id": 3,
+    "sources": [
+      {
+        "title": "Control Flow",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html"
+      },
+      {
+        "title": "If Statements",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"
+      },
+      {
+        "title": "Switch Statements",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"
+      },
+      {
+        "title": "While Loops",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"
+      },
+      {
+        "title": "For Loops",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"
+      },
+      {
+        "title": "Break and Return",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html"
+      }
+    ]
+  },
+  {
+    "name": "Classes",
+    "id": 4,
     "sources": [
       {
         "title": "Classes",
@@ -35,7 +109,7 @@
   },
   {
     "name": "Methods",
-    "id": 2,
+    "id": 5,
     "sources": [
       {
         "title": "Methods",
@@ -57,7 +131,7 @@
   },
   {
     "name": "Special Methods",
-    "id": 3,
+    "id": 6,
     "sources": [
       {
         "title": "Constructors",

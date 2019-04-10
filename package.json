@@ -63,7 +63,10 @@
       "target": "portable"
     },
     "linux": {
-      "target": ["deb", "tar.gz"]
+      "target": [
+        "deb",
+        "tar.gz"
+      ]
     }
   }
 }
