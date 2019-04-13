@@ -4,16 +4,16 @@
     "id": 1,
     "sources": [
       {
+        "title": "Comments and Main",
+        "url": "https://docs.oracle.com/javase/tutorial/getStarted/application/index.html"
+      },
+      {
         "title": "Variables",
         "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html"
       },
       {
         "title": "Primitive Data Types",
         "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"
-      },
-      {
-        "title": "Arrays",
-        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html"
       }
     ]
   },
@@ -144,6 +144,74 @@
       {
         "title": "Other Object Methods",
         "url": "https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html"
+      }
+    ]
+  },
+  {
+    "name": "Interfaces",
+    "id": 7,
+    "sources":[
+      {
+        "title": "Interfaces",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html"
+      },
+      {
+        "title": "Defining Interfaces",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/interfaceDef.html"
+      },
+      {
+        "title": "Implementation",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html"
+      },
+      {
+        "title": "Type",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html"
+      },
+      {
+        "title": "Evolving Interfaces",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/nogrow.html"
+      },
+      {
+        "title": "Default",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"
+      }
+    ]
+  },
+  {
+    "name": "Inheritance",
+    "id": 8,
+    "sources":[
+      {
+        "title": "Inheritance",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html"
+      },
+      {
+        "title": "Multiple",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html"
+      },
+      {
+        "title": "Overriding",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/override.html"
+      },
+      {
+        "title": "Polymorphism",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html"
+      },
+      {
+        "title": "Hiding Fields",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/hidevariables.html"
+      },
+      {
+        "title": "Super",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/super.html"
+      },
+      {
+        "title": "Final",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/final.html"
+      },
+      {
+        "title": "Abstract",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
       }
     ]
   }
