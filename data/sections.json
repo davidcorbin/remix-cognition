@@ -11,9 +11,14 @@
       "lessons": [4,5,6]
     },
     {
-      "name": "Section 2",
+      "name": "Section 3",
       "id": 3,
       "lessons": [7,8]
+    },
+    {
+      "name": "Section 4",
+      "id": 4,
+      "lessons": [9,10,11,12]
     }
   ]
 }

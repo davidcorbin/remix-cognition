@@ -214,5 +214,105 @@
         "url": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
       }
     ]
+  },
+  {
+    "name": "Java Lib. and I/O",
+    "id": 9,
+    "sources":[
+      {
+        "title": "Print",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/numberformat.html"
+      },
+      {
+        "title": "Math",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/beyondmath.html"
+      },
+      {
+        "title": "Characters",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/characters.html"
+      },
+      {
+        "title": "Packages",
+        "url": "https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html"
+      },
+      {
+        "title": "Scanner",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/io/scanning.html"
+      }
+    ]
+  },
+  {
+    "name": "Arrays and Chars",
+    "id": 10,
+    "sources":[
+      {
+        "title": "Arrays",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html"
+      },
+      {
+        "title": "2D Arrays",
+        "url": "https://docs.oracle.com/javase/tutorial/reflect/special/arraySetGet.html"
+      },
+      {
+        "title": "Characters",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/characters.html"
+      }
+    ]
+  },
+  {
+    "name": "Strings",
+    "id": 11,
+    "sources":[
+      {
+        "title": "Strings",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/strings.html"
+      },
+      {
+        "title": "Numbers to Strings",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/converting.html"
+      },
+      {
+        "title": "Characters in Strings",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html"
+      },
+      {
+        "title": "Comparison",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/comparestrings.html"
+      }
+    ]
+  },
+  {
+    "name": "Exceptions",
+    "id": 12,
+    "sources":[
+      {
+        "title": "Exceptions",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html"
+      },
+      {
+        "title": "Handling Exceptions",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/handling.html"
+      },
+      {
+        "title": "Try",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/try.html"
+      },
+      {
+        "title": "Catch",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/catch.html"
+      },
+      {
+        "title": "Finally",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html"
+      },
+      {
+        "title": "Throws",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/declaring.html"
+      },
+      {
+        "title": "Throwing Exceptions",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/throwing.html"
+      }
+    ]
   }
 ]
