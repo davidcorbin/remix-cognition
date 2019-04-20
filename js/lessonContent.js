@@ -22,6 +22,15 @@ function lessonContent () {
   const fs = require('fs')
   let rawdata = fs.readFileSync(LESSON_FILE)
   let allLessons = JSON.parse(rawdata)
+  // Peter's attempt at lesson changes
+  // Create the iFrame and set its url
+  const currentIfram = document.createElement('iframe')
+  currentIfram.src = allLessons[0].sources[0].url
+  const currentLesson = document.createElement('div')
+  currentLesson.className = 'currentLesson'
+  currentLesson.append(currentIfram)
+  ol.append(currentLesson)
+  // End attempt
   allLessons.forEach(function (element) {
     if (element.id.toString() === lessonID) {
       document.getElementById('lessonContent').innerHTML = element.name
