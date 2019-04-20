@@ -35,15 +35,17 @@ function lessonContent () {
     if (element.id.toString() === lessonID) {
       document.getElementById('lessonContent').innerHTML = element.name
       element.sources.forEach(function (source, i) {
-        const ifram = document.createElement('iframe')
-        ifram.src = source.url
+        // const ifram = document.createElement('iframe')
+        // ifram.src = source.url
 
         const individualLessonDiv = document.createElement('div')
+        const individualLesson = document.createElement('a')
+        individualLesson.innerHTML = source.title
         individualLessonDiv.className = 'individualLesson'
-        const lessonTitle = document.createElement('h3')
-        lessonTitle.innerText = i + 1 + '. ' + source.title
-        individualLessonDiv.append(lessonTitle)
-        individualLessonDiv.append(ifram)
+        // const lessonTitle = document.createElement('h3')
+        // lessonTitle.innerText = i + 1 + '. ' + source.title
+        individualLessonDiv.append(individualLesson)
+        // individualLessonDiv.append(ifram)
         ol.append(individualLessonDiv)
       })
     }
