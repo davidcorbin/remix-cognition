@@ -24,11 +24,11 @@ function lessonContent () {
   let allLessons = JSON.parse(rawdata)
   // Peter's attempt at lesson changes
   // Create the iFrame and set its url
-  const currentIfram = document.createElement('iframe')
-  currentIfram.src = allLessons[0].sources[0].url
+  const currentIframe = document.createElement('iframe')
+  currentIframe.src = allLessons[0].sources[0].url
   const currentLesson = document.createElement('div')
   currentLesson.className = 'currentLesson'
-  currentLesson.append(currentIfram)
+  currentLesson.append(currentIframe)
   ol.append(currentLesson)
   // End attempt
   allLessons.forEach(function (element) {
@@ -41,7 +41,10 @@ function lessonContent () {
         const individualLessonDiv = document.createElement('div')
         const individualLesson = document.createElement('a')
         individualLesson.innerHTML = source.title
-        individualLessonDiv.className = 'individualLesson'
+        individualLessonDiv.className = 'nav-left'
+        individualLesson.addEventListener('click', () => {
+          currentIframe.src = source.url
+        })
         // const lessonTitle = document.createElement('h3')
         // lessonTitle.innerText = i + 1 + '. ' + source.title
         individualLessonDiv.append(individualLesson)
