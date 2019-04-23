@@ -17,6 +17,7 @@ function lessonContent () {
   }
   store.set('started', started)
   const ol = document.getElementById('lessonPages')
+  const sidebar = document.getElementById('lessons')
 
   // file I/O
   const fs = require('fs')
@@ -41,15 +42,22 @@ function lessonContent () {
         const individualLessonDiv = document.createElement('div')
         const individualLesson = document.createElement('a')
         individualLesson.innerHTML = source.title
-        individualLessonDiv.className = 'nav-left'
+        individualLesson.className = ''
         individualLesson.addEventListener('click', () => {
           currentIframe.src = source.url
+          individualLesson.parentElement.parentElement.childNodes.forEach(function (sibling) {
+            sibling.firstChild.className = ''
+          })
+          individualLesson.className = 'started'
         })
+        if (i === 0) {
+          individualLesson.className = 'started'
+        }
         // const lessonTitle = document.createElement('h3')
         // lessonTitle.innerText = i + 1 + '. ' + source.title
         individualLessonDiv.append(individualLesson)
         // individualLessonDiv.append(ifram)
-        ol.append(individualLessonDiv)
+        sidebar.append(individualLessonDiv)
       })
     }
   })
