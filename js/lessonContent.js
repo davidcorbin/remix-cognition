@@ -25,8 +25,9 @@ function lessonContent () {
   let allLessons = JSON.parse(rawdata)
   // Peter's attempt at lesson changes
   // Create the iFrame and set its url
+  document.getElementById('sidebarTitle').innerHTML = allLessons[lessonID - 1].name
   const currentIframe = document.createElement('iframe')
-  currentIframe.src = allLessons[0].sources[0].url
+  currentIframe.src = allLessons[lessonID - 1].sources[0].url
   const currentLesson = document.createElement('div')
   currentLesson.className = 'currentLesson'
   currentLesson.append(currentIframe)
@@ -34,7 +35,7 @@ function lessonContent () {
   // End attempt
   allLessons.forEach(function (element) {
     if (element.id.toString() === lessonID) {
-      document.getElementById('lessonContent').innerHTML = element.name
+      // document.getElementById('lessonContent').innerHTML = element.name
       element.sources.forEach(function (source, i) {
         // const ifram = document.createElement('iframe')
         // ifram.src = source.url
