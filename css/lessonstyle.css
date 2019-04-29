@@ -7,3 +7,9 @@
     background: #fff;
     height: 75vh;
 }
+
+.currentLesson iframe {
+    width: 100%;
+    background: #fff;
+    height: 75vh;
+}
