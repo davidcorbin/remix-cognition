@@ -1,81 +1,96 @@
 [
   {
-    "text" : "How many constructors can a class have",
+    "text" : "How do you write a single line text comment in Java?",
     "answers" : [
-      "Infinitely many overloaded constructors",
-      "One, only the default constructor",
-      "Two, the default constructor and some overloaded constructor",
-      "Zero, classes don't have constructors, only objects do."
+      "// Comment",
+      "/* Comment ",
+      "/** Comment */",
+      "#Comment"
     ]
   },
   {
-    "text" : "How many constructors does a class NEED to have",
+    "text" : "How do you write a block text comment in Java?",
     "answers" : [
-      "Zero, the class does not necessarily have to create an object",
-      "One, only the default constructor",
-      "Two, the default constructor and some overloaded constructor",
-      "Three, the default constructor some overloaded constructor and a super constructor"
+      "/* Comment */",
+      "// Comment",
+      "/** Comment */",
+      "#Comment"
     ]
   },
   {
-    "text" : "What is the constructor that does not have any parameters and sets the class variables to their default value",
+    "text" : "How is the main method started in a Java program",
     "answers" : [
-      "The default constructor",
-      "The overloaded constructor",
-      "The abstract constructor",
-      "The super constructor"
+      "public static void main(String[] args)",
+      "public void main(String[] args)",
+      "public static void main(String args[])",
+      "public main(String args[])"
     ]
   },
   {
-    "text" : "Which of the following is a valid constructor",
+    "text" : "How is the main method started in a Java program",
     "answers" : [
-      "public Square()",
-      "private void Square()",
-      "const Square()",
-      "static void Square()"
+      "public static void main(String[] args)",
+      "public void main(String[] args)",
+      "public static void main(String args[])",
+      "public main(String args[])"
     ]
   },
   {
-    "text" : "Which of the following is an invalid comparison",
+    "text" : "Instance variables are static",
     "answers" : [
-      "\"string1\" == \"string2\"",
-      "7 == 7",
-      "object1.equals(object2)",
-      "1.7 < 15"
+      "false",
+      "true"
     ]
   },
   {
-    "text" : "In Java, strings can be correctly compared with either == or .equals()",
+    "text" : "How many copies of static variables exist",
     "answers" : [
-      "False",
-      "True"
+      "one",
+      "one per object",
+      "many"
     ]
   },
   {
-    "text" : "What happens when you print an object",
+    "text" : "Variables are case sensitive",
     "answers" : [
-      "Its toString method is called",
-      "Its memory location is printed",
-      "Its reference number is printed",
-      "All of its fields are printed"
+      "true",
+      "false"
     ]
   },
   {
-    "text" : "What happens when you call .equals() on an object if you have not overrided the the .equals() function",
+    "text" : "Which of these is not a primitive data type",
     "answers" : [
-      "It compares the addresses of the two objects",
-      "It compares the data inside the two objects",
-      "It throws an exception",
-      "The program crashes"
+      "string",
+      "int",
+      "boolean",
+      "double"
     ]
   },
   {
-    "text" : "What do you have to be careful about when using the default .clone() method in an object that implements the Cloneable interface",
+    "text" : "Which of these data types holds a number that has a decimal point",
     "answers" : [
-      "You need to be careful that the object does not contain a referance to an external object",
-      "It does not create a new object, it only clones the address",
-      "You need to make sure the object is clone-safe so it does not throw a CloneNotSupportedException",
-      "Since clone() returns a default Object you need to cast it to your Cloneable object"
+      "double",
+      "int",
+      "long",
+      "byte"
+    ]
+  },
+  {
+    "text" : "How do you declare an integer i with an initial value of 10?",
+    "answers" : [
+      "int i = 10;",
+      "int i = new int(10)",
+      "int i = new int = 10;",
+      "int = 10;"
+    ]
+  },
+  {
+    "text" : "How do you declare a char c with an initial value of the character j",
+    "answers" : [
+      "char c = 'j';",
+      "char j = c;",
+      "char c = \"j\";",
+      "char c = new char(j);"
     ]
   }
 ]

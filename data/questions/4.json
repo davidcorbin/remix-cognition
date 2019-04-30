@@ -1,6 +1,6 @@
 [
   {
-    "text" : "How many objects instances can you create from a class?",
+    "text" : "How many objects instances can you create from a class",
     "answers" : [
       "Infinitely many object instances can be created from one class.",
       "Only one object can be created per class.",
@@ -24,6 +24,72 @@
       "Methods",
       "Class",
       "Variables"
+    ]
+  },
+  {
+    "text" : "What surrounds the class body",
+    "answers" : [
+      "Braces {}",
+      "Parenthesis ()",
+      "Brackets []",
+      "Angle brackets <>"
+    ]
+  },
+  {
+    "text" : "When is the 'new' keyword used",
+    "answers" : [
+      "When initializing an object",
+      "When declaring a class",
+      "To give a field a new value"
+    ]
+  },
+  {
+    "text" : "What kind of variable is 'radius' in public Circle(int radius)",
+    "answers" : [
+      "Parameter",
+      "Local variable",
+      "Field"
+    ]
+  },
+  {
+    "text" : "What kind of variable is located at the beginning of a class",
+    "answers" : [
+      "Field",
+      "Local variable",
+      "Parameter"
+    ]
+  },
+  {
+    "text" : "What kind of variable is located inside the body of a method",
+    "answers" : [
+      "Local variable",
+      "Field",
+      "Parameter"
+    ]
+  },
+  {
+    "text" : "What kind of variable belongs to the class instead of a specific instance of that class",
+    "answers" : [
+      "Static variable",
+      "Public variable",
+      "Fields",
+      "Getters"
+    ]
+  },
+  {
+    "text" : "Java objects need to be deleted once they are no longer being used",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "What are the components of a field declaration",
+    "answers" : [
+      "Modifiers, data type, and name",
+      "Data type and name",
+      "Scope level and name",
+      "Size, data type, and name"
     ]
   }
 ]
