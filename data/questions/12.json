@@ -1,10 +1,101 @@
 [
   {
-    "text" : "",
-    "code" : "",
+    "text" : "What always happens when an exception is thrown",
     "answers" : [
-      "",
-      ""
+      "The call stack is checked for an exception handler.",
+      "The program crashes",
+      "A separate program catches the exception",
+      "The program restarts"
+    ]
+  },
+  {
+    "text" : "If an exception is not caught, the program will be terminated",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "Which of the following is NOT a way to throw an exception",
+    "answers" : [
+      "Run code that has a syntax error",
+      "Create a FileReader for a file that doesn't exist.",
+      "Call a method of an undeclared object.",
+      "throw new Exception();"
+    ]
+  },
+  {
+    "text" : "A try block must have a catch block",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "When should a try block NOT be used",
+    "answers" : [
+      "When you want exceptions to be handled by whoever called this method.",
+      "When you want a method to handle its own exceptions.",
+      "When you want to run code that might thrown an exception.",
+      "When you are opening files."
+    ]
+  },
+  {
+    "text" : "What happens when an exception is thrown in a try block",
+    "answers" : [
+      "The program immediately executed the code of the catch block.",
+      "The program finishes executing the try block then continues to the catch block.",
+      "An error message is printed out that the try was unsuccessful.",
+      "The try block returns false."
+    ]
+  },
+  {
+    "text" : "When is the catch block run",
+    "answers" : [
+      "When the try block throws an exception the catch block can accept.",
+      "After the try block finishes running.",
+      "When any exception is thrown from the try block.",
+      "When an error is thrown that references the catch block."
+    ]
+  },
+  {
+    "text" : "Multiple catch blocks with different arguments can be defined",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "What is wrong with the following code",
+    "code" : "catch(Exception){}",
+    "answers" : [
+      "There is no name for the exception.",
+      "There is nothing in the body of the catch block.",
+      "Exception is not a specific type of exception."
+    ]
+  },
+  {
+    "text" : "What is the purpose of a finally block",
+    "answers" : [
+      "It can clean up since it is guaranteed to run.",
+      "It handles the case where no error is thrown in the try block.",
+      "It is used to finallize the program if an exception causes it to terminate."
+    ]
+  },
+  {
+    "text" : "What is the throws keyword used for",
+    "answers" : [
+      "It allows a method further up the call stack to handle an exception.",
+      "To create a new exception.",
+      "To specify what types of exceptions can be caught."
+    ]
+  },
+  {
+    "text" : "Is the following syntax correct",
+    "code" : "throw new IOException();",
+    "answers" : [
+      "Yes",
+      "No"
     ]
   }
 ]
