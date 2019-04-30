@@ -82,7 +82,7 @@ function quizContent () {
 
   // Add each question
   questionData.forEach(function (question) {
-    console.log(question.answers[0])
+    // console.log(question.answers[0])
     answerData.push(question.answers[0])
     question.answers = shuffle(question.answers)
     var box = document.createElement('div')
@@ -93,6 +93,18 @@ function quizContent () {
     text.innerHTML = question.text
     text.className = 'question-text'
     box.append(text)
+
+    if ('code' in question) {
+      var questionPre = document.createElement('pre')
+      questionPre.className = 'question-pre'
+
+      var questionCode = document.createElement('code')
+      questionCode.innerHTML = question.code
+      questionCode.className = 'question-code java'
+
+      questionPre.append(questionCode)
+      box.append(questionPre)
+    }
 
     // Put shuffled answers under question
     question.answers.forEach(function (answer) {

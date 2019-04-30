@@ -9,6 +9,16 @@
     ]
   },
   {
+    "text" : "What would the following Java snippet output?",
+    "code" : "System.out.println('Hello World!');",
+    "answers" : [
+      "Hello World!",
+      "System.out.println('Hello World!');",
+      "You can only create a set number of objects per class, this number is defined in the class.",
+      "You can create only one object instance per constructor in the class."
+    ]
+  },
+  {
     "text" : "Which of the following determines the functions of an object",
     "answers" : [
       "Methods",
