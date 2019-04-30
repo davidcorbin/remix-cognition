@@ -1,81 +1,10 @@
 [
   {
-    "text" : "How many constructors can a class have",
+    "text" : "",
+    "code" : "",
     "answers" : [
-      "Infinitely many overloaded constructors",
-      "One, only the default constructor",
-      "Two, the default constructor and some overloaded constructor",
-      "Zero, classes don't have constructors, only objects do."
-    ]
-  },
-  {
-    "text" : "How many constructors does a class NEED to have",
-    "answers" : [
-      "Zero, the class does not necessarily have to create an object",
-      "One, only the default constructor",
-      "Two, the default constructor and some overloaded constructor",
-      "Three, the default constructor some overloaded constructor and a super constructor"
-    ]
-  },
-  {
-    "text" : "What is the constructor that does not have any parameters and sets the class variables to their default value",
-    "answers" : [
-      "The default constructor",
-      "The overloaded constructor",
-      "The abstract constructor",
-      "The super constructor"
-    ]
-  },
-  {
-    "text" : "Which of the following is a valid constructor",
-    "answers" : [
-      "public Square()",
-      "private void Square()",
-      "const Square()",
-      "static void Square()"
-    ]
-  },
-  {
-    "text" : "Which of the following is an invalid comparison",
-    "answers" : [
-      "\"string1\" == \"string2\"",
-      "7 == 7",
-      "object1.equals(object2)",
-      "1.7 < 15"
-    ]
-  },
-  {
-    "text" : "In Java, strings can be correctly compared with either == or .equals()",
-    "answers" : [
-      "False",
-      "True"
-    ]
-  },
-  {
-    "text" : "What happens when you print an object",
-    "answers" : [
-      "Its toString method is called",
-      "Its memory location is printed",
-      "Its reference number is printed",
-      "All of its fields are printed"
-    ]
-  },
-  {
-    "text" : "What happens when you call .equals() on an object if you have not overrided the the .equals() function",
-    "answers" : [
-      "It compares the addresses of the two objects",
-      "It compares the data inside the two objects",
-      "It throws an exception",
-      "The program crashes"
-    ]
-  },
-  {
-    "text" : "What do you have to be careful about when using the default .clone() method in an object that implements the Cloneable interface",
-    "answers" : [
-      "You need to be careful that the object does not contain a referance to an external object",
-      "It does not create a new object, it only clones the address",
-      "You need to make sure the object is clone-safe so it does not throw a CloneNotSupportedException",
-      "Since clone() returns a default Object you need to cast it to your Cloneable object"
+      "",
+      ""
     ]
   }
 ]
