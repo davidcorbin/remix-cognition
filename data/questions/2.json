@@ -1,10 +1,61 @@
 [
   {
-    "text" : "",
-    "code" : "",
+    "text" : "What is the order of operations for operators",
     "answers" : [
-      "",
-      ""
+      "multiplication, addition, assigment",
+      "assignment, multiplication, addition",
+      "multiplication, assignment, equality",
+      "relational, equality, multiplication"
+    ]
+  },
+  {
+    "text" : "How do you assign a value of 10 to int i",
+    "answers" : [
+      "i = 10;",
+      "i == 10;",
+      "i += 10;",
+      "10 = i;"
+    ]
+  },
+  {
+    "text" : "Which of these is an invalid use of a unary operation",
+    "answers" : [
+      "==i;",
+      "++i;",
+      "+i",
+      "--i"
+    ]
+  },
+  {
+    "text" : "How do you check if an integer i is equal to 10",
+    "answers" : [
+      "i == 10;",
+      "i = 10;",
+      "10 = i;",
+      "i => 10;"
+    ]
+  },
+  {
+    "text" : "what is j after this operation: j = true && false;",
+    "answers" : [
+      "false",
+      "true"
+    ]
+  },
+  {
+    "text" : "what is j after this operation: j = true || false;",
+    "answers" : [
+      "true",
+      "false"
+    ]
+  },
+  {
+    "text" : "what is i after this operation: int i = 1+2*12/3+1;",
+    "answers" : [
+      "10",
+      "9",
+      "8",
+      "7"
     ]
   }
 ]
