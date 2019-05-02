@@ -1,10 +1,83 @@
 [
   {
-    "text" : "",
-    "code" : "",
+    "text" : "What are strings in java",
     "answers" : [
-      "",
-      ""
+      "Objects.",
+      "Arrays of characters.",
+      "The same as variable names.",
+      "Primitive data types."
+    ]
+  },
+  {
+    "text" : "How should strings be compared",
+    "answers" : [
+      "string1.equals(string2)",
+      "string1 == string2",
+      "string1 && string2",
+      "string1.value == string2.value"
+    ]
+  },
+  {
+    "text" : "What is the result of this code",
+    "code" : "\"ABCD\".length();",
+    "answers" : [
+      "4",
+      "3",
+      "A syntax error."
+    ]
+  },
+  {
+    "text" : "The following two lines are equivalent",
+    "code" : "\"ABCD\".concat(\"E\")\n\"ABCD\" + \"E\"",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "When is printf used",
+    "answers" : [
+      "When you want to format what is being printed.",
+      "When you want to format a string.",
+      "When you want to print characters and strings.",
+      "When you want to print the contents of a file."
+    ]
+  },
+  {
+    "text" : "What does the following method return",
+    "code" : "Integer.valueOf()",
+    "answers" : [
+      "The integer representation of the string passed to it.",
+      "The number that is used to store the specified integer.",
+      "The value of an integer in the form of a double.",
+      "A string containing the integer that it was passed."
+    ]
+  },
+  {
+    "text" : "Does the following code return true",
+    "code" : "\"ABCD\".charAt(1) == 'B'",
+    "answers" : [
+      "Yes",
+      "No"
+    ]
+  },
+  {
+    "text" : "Which of the following is NOT a string method",
+    "answers" : [
+      "integerValue()",
+      "split()",
+      "toLowerCase()",
+      "contains()"
+    ]
+  },
+  {
+    "text" : "What is the following code doing",
+    "code" : "string1 == string2",
+    "answers" : [
+      "Comparing the references of the string objects.",
+      "Comparing the integer values of the strings.",
+      "Setting the strings to be equal",
+      "Comparing the first character of each string"
     ]
   }
 ]
