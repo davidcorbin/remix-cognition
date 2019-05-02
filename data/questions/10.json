@@ -45,7 +45,6 @@
   },
   {
     "text" : "All columns of a 2D array must be the same length",
-    "code" : "",
     "answers" : [
       "False",
       "True"
@@ -59,19 +58,27 @@
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Which is the optimal way to access all elements from a 2D array using the following nested for loop",
+    "code" : "for(int j=0; j<9; j++)\n\tfor(int i=0; i<9; i++)",
     "answers" : [
-      "",
-      ""
+      "myArray[j][i]",
+      "myArray[i][j]"
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Which of the following is false regarding escape sequences",
     "answers" : [
-      "",
-      ""
+      "\\u inserts an underscore.",
+      "\\t inserts a tab.",
+      "\\n inserts a new line.",
+      "\\\" inserts a \"."
+    ]
+  },
+  {
+    "text" : "Characters are java objects",
+    "answers" : [
+      "False",
+      "True"
     ]
   }
 ]

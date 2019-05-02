@@ -79,5 +79,14 @@
       "Setting the strings to be equal",
       "Comparing the first character of each string"
     ]
+  },
+  {
+    "text" : "Which of the following can a string NOT be converted to",
+    "answers" : [
+      "Boolean.",
+      "Array of characters.",
+      "Integer.",
+      "Float"
+    ]
   }
 ]
