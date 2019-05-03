@@ -9,59 +9,69 @@
     ]
   },
   {
-    "text" : "",
+    "text" : "From which of the following do all java classes inherit",
     "answers" : [
-      "",
-      ""
+      "The Object class.",
+      "The Element class.",
+      "The Class interface.",
+      "The java package."
     ]
   },
   {
-    "text" : "",
+    "text" : "When one class extends another class, what is inherited",
     "answers" : [
-      "",
-      ""
+      "All fields and methods.",
+      "Only methods.",
+      "Only fields and methods that are public.",
+      "All fields and constructors."
     ]
   },
   {
-    "text" : "",
+    "text" : "What is the purpose of the protected keyword",
     "answers" : [
-      "",
-      ""
+      "It allows something to be accessible only to its class and classes that inherit it.",
+      "It prevents other classes from modifying its value.",
+      "It prevents any modification of its value.",
+      "It allows something to be accessible to every class except the one that it is in."
     ]
   },
   {
-    "text" : "",
+    "text" : "Which of the following can NOT be done in a subclass",
     "answers" : [
-      "",
-      ""
+      "Use private fields of its superclass.",
+      "Use inherited fields and methods.",
+      "Hide inherited fields.",
+      "Override inherited methods."
     ]
   },
   {
-    "text" : "",
+    "text" : "Which of the following is a proper use of casting",
     "answers" : [
-      "",
-      ""
+      "Object a = new ObjectSubclass();",
+      "ObjectSubclass a = new Object();"
     ]
   },
   {
-    "text" : "",
+    "text" : "A class can only extend one class",
     "answers" : [
-      "",
-      ""
+      "True",
+      "False"
     ]
   },
   {
-    "text" : "",
+    "text" : "The keyword @Override must be used when overriding an inherited method",
     "answers" : [
-      "",
-      ""
+      "False",
+      "True"
     ]
   },
   {
-    "text" : "",
+    "text" : "When is polymorphism used",
     "answers" : [
-      "",
-      ""
+      "When multiple different subclasses are being treated as their superclass.",
+      "When multiple classes have the same subclass.",
+      "When a superclass is being treated as its subclass.",
+      "When a subclass wants to use a method from its superclass that it has overriden."
     ]
   },
   {
