@@ -75,24 +75,36 @@
     ]
   },
   {
-    "text" : "",
+    "text" : "When can the super keyword be used",
     "answers" : [
-      "",
-      ""
+      "When in a method that overrides one of its superclass's methods.",
+      "When in a superclass.",
+      "When declaring a field that inherits from its superclass.",
+      "When using a field from a superclass."
     ]
   },
   {
-    "text" : "",
+    "text" : "The following code is the proper way to call the constructor of the superclass",
+    "code" : "className.super();",
     "answers" : [
-      "",
-      ""
+      "False",
+      "True"
     ]
   },
   {
-    "text" : "",
+    "text" : "Classes defined with the final keyword cannot be overridden",
     "answers" : [
-      "",
-      ""
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "Which of the following is NOT true about abstract methods",
+    "answers" : [
+      "An abstract method has no body.",
+      "An abtract method must be in an abstract class.",
+      "An abstract method must be implemented in every non-abstract subclass.",
+      "An abstract method may be an implementation of an interface method."
     ]
   }
 ]
