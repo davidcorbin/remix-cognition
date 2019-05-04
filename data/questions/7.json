@@ -1,5 +1,87 @@
 [
   {
+    "text" : "Which of the following do interfaces NOT contain",
+    "answers" : [
+      "Constructors.",
+      "Constants.",
+      "Method signatures.",
+      "Static methods."
+    ]
+  },
+  {
+    "text" : "Which interface methods can have bodies",
+    "answers" : [
+      "Static and default methods.",
+      "Constructors and static methods.",
+      "None.",
+      "Overridden methods."
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
+    "text" : "",
+    "code" : "",
+    "answers" : [
+      "",
+      ""
+    ]
+  },
+  {
     "text" : "",
     "code" : "",
     "answers" : [

@@ -101,9 +101,9 @@
   {
     "text" : "Which of the following is NOT true about abstract methods",
     "answers" : [
-      "An abstract method has no body.",
+      "An abstract method must be implemented in every subclass.",
       "An abtract method must be in an abstract class.",
-      "An abstract method must be implemented in every non-abstract subclass.",
+      "An abstract method has no body.",
       "An abstract method may be an implementation of an interface method."
     ]
   }
