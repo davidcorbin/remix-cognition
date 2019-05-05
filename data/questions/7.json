@@ -18,51 +18,52 @@
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Interfaces are a type of class",
     "answers" : [
-      "",
-      ""
+      "False",
+      "True"
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Which of the following is NOT true about interfaces",
     "answers" : [
-      "",
-      ""
+      "Interfaces inherit from java Objects.",
+      "Multiple interfaces can be implemented in a class.",
+      "Interfaces can implement interfaces.",
+      "An object can be cast to an interface type."
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "A safe way to modify an existing interface is to create a new interface with modifications that implements the original interface",
     "answers" : [
-      "",
-      ""
+      "True",
+      "False"
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "What can you NOT do when implementing an interface with a default method",
     "answers" : [
-      "",
-      ""
+      "Remove the default method.",
+      "Redeclare the default method as an abstract method.",
+      "Override the default method.",
+      "Inherit the default method."
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Do java Strings implement the Comparable interface",
     "answers" : [
-      "",
-      ""
+      "Yes.",
+      "No."
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "What is wrong with the following interface",
+    "code" : "public class interface myInterface {}",
     "answers" : [
-      "",
-      ""
+      "It shouldn't have the class keyword.",
+      "It needs paranthesis after myInterface.",
+      "Interfaces use bracket instead of braces.",
+      "Interfaces shouldn't be public."
     ]
   },
   {
