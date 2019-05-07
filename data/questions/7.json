@@ -67,27 +67,19 @@
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Which of the following to interfaces NOT have",
     "answers" : [
-      "",
-      ""
+      "Constructors.",
+      "Method parameters.",
+      "Static methods.",
+      "Import statements."
     ]
   },
   {
-    "text" : "",
-    "code" : "",
+    "text" : "Interfaces can have static methods",
     "answers" : [
-      "",
-      ""
-    ]
-  },
-  {
-    "text" : "",
-    "code" : "",
-    "answers" : [
-      "",
-      ""
+      "True",
+      "False"
     ]
   }
 ]
