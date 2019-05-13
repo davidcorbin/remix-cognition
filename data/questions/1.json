@@ -1,6 +1,6 @@
 [
   {
-    "text" : "How do you write a single line text comment in Java?",
+    "text" : "How do you write a single line text comment in Java",
     "answers" : [
       "// Comment",
       "/* Comment ",
@@ -24,15 +24,6 @@
       "/* Comment */",
       "// Comment",
       "#Comment"
-    ]
-  },
-  {
-    "text" : "How is the main method started in a Java program",
-    "answers" : [
-      "public static void main(String[] args)",
-      "public void main(String[] args)",
-      "public static void main(String args[])",
-      "public main(String args[])"
     ]
   },
   {

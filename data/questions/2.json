@@ -32,25 +32,28 @@
       "i == 10;",
       "i = 10;",
       "10 = i;",
-      "i => 10;"
+      "i.equals(10);"
     ]
   },
   {
-    "text" : "what is j after this operation: j = true && false;",
+    "text" : "what is j after this operation",
+    "code" : "j = true && false;",
     "answers" : [
       "false",
       "true"
     ]
   },
   {
-    "text" : "what is j after this operation: j = true || false;",
+    "text" : "what is j after this operation",
+    "code" : "j = true || false;",
     "answers" : [
       "true",
       "false"
     ]
   },
   {
-    "text" : "what is i after this operation: int i = 1+2*12/3+1;",
+    "text" : "what is i after this operation",
+    "code" : "int i = 1+2*12/3+1;",
     "answers" : [
       "10",
       "9",
