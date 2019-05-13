@@ -62,6 +62,8 @@ function loadProgress () {
   progChart.update()
 
   // Get quiz data for chart
+  var grade = 0
+  var numQuizzes = 0
   var quizzes = store.get('quizzes')
   var labels = []
   var data = []
@@ -70,6 +72,8 @@ function loadProgress () {
     var quiz = quizzes[q]
     labels.push('Quiz ' + q)
     var percent = Math.floor(100 * quiz.numCorrect / quiz.numQuestions)
+    grade += percent
+    numQuizzes++
     console.log(quiz.numCorrect)
     data.push(percent)
     if (percent > 85) {
@@ -79,6 +83,10 @@ function loadProgress () {
     } else {
       backgroundColor.push('#1C2035')
     }
+  }
+  // Set the grade to the average of the quizzes
+  if (numQuizzes !== 0) {
+    grade = grade / numQuizzes
   }
   console.log(labels)
   console.log(data)
@@ -157,6 +165,8 @@ function loadProgress () {
   quizChart.update()
 
   // Get quiz data for chart
+  var examGrade = 0
+  var numExams = 0
   var exams = store.get('exams')
   labels = []
   data = []
@@ -165,6 +175,8 @@ function loadProgress () {
     var exam = exams[q]
     labels.push('Exam ' + q)
     percent = Math.floor(100 * exam.numCorrect / exam.numQuestions)
+    examGrade += percent
+    numExams++
     console.log(exam.numCorrect)
     data.push(percent)
     if (percent > 85) {
@@ -175,6 +187,14 @@ function loadProgress () {
       backgroundColor.push('#1C2035')
     }
   }
+  // Calculate total grade with equal weights to total exam and total quiz score
+  if (numExams !== 0) {
+    examGrade = examGrade / numExams
+    // Set grade to be the average of the quiz and exam grades
+    grade = (grade + examGrade) / 2
+  }
+  var gradeElement = document.getElementById('grade')
+  gradeElement.innerHTML = grade
   console.log(labels)
   console.log(data)
   console.log(backgroundColor)
