@@ -19,7 +19,16 @@
         Welcome to Remix Cognition, the intelligent AP Computer Science tutor.
         <br><br>
         <p>Your grade is <span id="grade"></span>%.</p>
-        <p><img src="data/Mascot.png" alt="Mascot" align="middle" height="126" width="77"><span id="message"></span></p>
+        <table>
+          <td><img class = "mascot" src="data/Mascot.png" alt="Mascot" vertical-align="middle" height="126" width="77"></td>
+          <td style = "width:40px"></td>
+          <td style = "font-family: 'Comic Sans MS';">
+            <div style = "background-color: var(--button-finished); border-radius: 25px 25px 25px 0px; ">
+              <p id="message" style = "padding-right: 20px;  padding-left: 20px; padding-top: 10px; padding-bottom: 10px;"></p>
+            </div>
+          </td>
+        </table>
+        <p></p>
         <div id="progress">
           <p>You have <span id="unstartedLessons"></span> lessons left:</p>
           <canvas id="progChart"></canvas>

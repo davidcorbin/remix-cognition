@@ -1,3 +1,8 @@
+@keyframes spin {
+  from {transform: rotate(-20deg);}
+  to {transform: rotate(20deg);}
+}
+
 .sidebar a {
 	font-size: 100%;
 	font-family: inherit;
@@ -80,4 +85,13 @@
 #progChart {
 	width: 200px;
 	height: 200px;
+}
+
+
+.mascot {
+	transform: rotate(-20deg);
+	animation-name: spin;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
