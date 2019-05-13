@@ -2,11 +2,15 @@
     "good": [
         "Good work!",
         "Your progress looks good.",
-        "Keep up the good work!"
+        "Keep up the good work!",
+        "Your grades are looking good."
     ],
     "retake": [
         "Looks like you should take quiz # again.",
         "You didn't do too hot on quiz #, why not take it again?",
-        "Ouch, quiz # doesn't look too great."
+        "Ouch, quiz # doesn't look too great.",
+        "Why not brush up on the material for quiz #?",
+        "Don't forget, you can always retake a bad quiz such as quiz #.",
+        "To improve your grade, retake quiz #."
     ]
 }
