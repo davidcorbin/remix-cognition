@@ -281,10 +281,13 @@ function loadProgress () {
   // Set mascot message
   let messageData = JSON.parse(fs.readFileSync(MESSAGE_FILE))
   var mascotMessage = document.getElementById('message')
+  var message
   if (grade > 90) {
-    mascotMessage.innerHTML = messageData.good[0]
+    message = messageData.good[Math.floor(Math.random() * messageData.good.length)]
   } else {
-    mascotMessage.innerHTML = messageData.good[0]
+    message = messageData.retake[Math.floor(Math.random() * messageData.retake.length)]
+    message = message.replace('#', quizSuggestion)
   }
+  mascotMessage.innerHTML = message
 }
 loadProgress()

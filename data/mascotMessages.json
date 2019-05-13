@@ -1,9 +1,12 @@
 {
-    "Good": [
-        "Good job",
-        "Awesome"
+    "good": [
+        "Good work!",
+        "Your progress looks good.",
+        "Keep up the good work!"
     ],
-    "Retake": [
-        "Take quiz # again"
+    "retake": [
+        "Looks like you should take quiz # again.",
+        "You didn't do too hot on quiz #, why not take it again?",
+        "Ouch, quiz # doesn't look too great."
     ]
 }
