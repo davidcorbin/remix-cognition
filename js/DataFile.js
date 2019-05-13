@@ -12,6 +12,9 @@ class dataFile {
   getQuestionsFile (quizNum) {
     return this.autoGetPath('./data/questions/' + quizNum + '.json')
   }
+  getMessagesFile () {
+    return this.autoGetPath('./data/mascotMessages.json')
+  }
   autoGetPath (filename) {
     if (this.isDev) {
       return filename

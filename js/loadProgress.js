@@ -11,6 +11,7 @@ function loadProgress () {
   const fs = require('fs')
   const LESSON_DATA = JSON.parse(fs.readFileSync(LESSON_FILE))
   const totalLessons = Object.keys(LESSON_DATA).length
+  const MESSAGE_FILE = df.getMessagesFile()
 
   // Get num of lessons started and finished from store
   var fiArr = store.get('finished')
@@ -64,6 +65,7 @@ function loadProgress () {
   // Get quiz data for chart
   var grade = 0
   var numQuizzes = 0
+  var quizSuggestion
   var quizzes = store.get('quizzes')
   var labels = []
   var data = []
@@ -74,6 +76,10 @@ function loadProgress () {
     var percent = Math.floor(100 * quiz.numCorrect / quiz.numQuestions)
     grade += percent
     numQuizzes++
+    // If this quiz is the lowest score so far, save it to quizSuggestion
+    if (percent < grade / numQuizzes) {
+      quizSuggestion = q
+    }
     console.log(quiz.numCorrect)
     data.push(percent)
     if (percent > 85) {
@@ -84,7 +90,7 @@ function loadProgress () {
       backgroundColor.push('#1C2035')
     }
   }
-  // Set the grade to the average of the quizzes
+  // Set the grade to the average of the quizzes and set the quizSuggestion
   if (numQuizzes !== 0) {
     grade = grade / numQuizzes
   }
@@ -193,6 +199,7 @@ function loadProgress () {
     // Set grade to be the average of the quiz and exam grades
     grade = (grade + examGrade) / 2
   }
+  grade = grade.toFixed(2)
   var gradeElement = document.getElementById('grade')
   gradeElement.innerHTML = grade
   console.log(labels)
@@ -270,5 +277,14 @@ function loadProgress () {
     }
   })
   examChart.update()
+
+  // Set mascot message
+  let messageData = JSON.parse(fs.readFileSync(MESSAGE_FILE))
+  var mascotMessage = document.getElementById('message')
+  if (grade > 90) {
+    mascotMessage.innerHTML = messageData.good[0]
+  } else {
+    mascotMessage.innerHTML = messageData.good[0]
+  }
 }
 loadProgress()
