@@ -35,11 +35,7 @@ function lessonContent () {
   // End attempt
   allLessons.forEach(function (element) {
     if (element.id.toString() === lessonID) {
-      // document.getElementById('lessonContent').innerHTML = element.name
       element.sources.forEach(function (source, i) {
-        // const ifram = document.createElement('iframe')
-        // ifram.src = source.url
-
         const individualLessonDiv = document.createElement('div')
         const individualLesson = document.createElement('a')
         individualLesson.innerHTML = source.title
@@ -54,10 +50,7 @@ function lessonContent () {
         if (i === 0) {
           individualLesson.className = 'started'
         }
-        // const lessonTitle = document.createElement('h3')
-        // lessonTitle.innerText = i + 1 + '. ' + source.title
         individualLessonDiv.append(individualLesson)
-        // individualLessonDiv.append(ifram)
         sidebar.append(individualLessonDiv)
       })
     }
