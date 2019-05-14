@@ -1,6 +1,6 @@
 [
     {
-        "text" : "What will this block of code print out?",
+        "text" : "What will this block of code print out",
         "code" : "int x = 0;\nif(x == 0)\n{\n\tSystem.out.println(\"Correct\");\n}\nelse\n{\n\tSystem.out.println(\"Incorrect\");\n}",
         "answers" : [
           "Correct",
@@ -8,7 +8,7 @@
         ]
     },
     {
-        "text" : "What will this block of code print out?",
+        "text" : "What will this block of code print out",
         "code" : "for(int x = 0; x < 2; x++)\n{\n\tSystem.out.print(x + \" \");\n}",
         "answers" : [
           "0 1 2",
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "text" : "How many times will this loop execute?",
+        "text" : "How many times will this loop execute",
         "code" : "int x = 10;\nwhile(x > 10)\n{\n\tx--;\n}",
         "answers" : [
           "0",
@@ -28,7 +28,7 @@
         ]
     },
     {
-        "text" : "How many times will this loop execute?",
+        "text" : "How many times will this loop execute",
         "code" : "for(int x = 5; x >= 0; x--)\n{\n\tx--;\n}",
         "answers" : [
           "3",
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "text" : "What does this loop do?",
+        "text" : "What does this loop do",
         "code" : "int i = 5;int n = 3;int o = i;\nfor(int x = 0; x < n; x++)\n{\n\ti = i * o;\n}",
         "answers" : [
           "Raises i to the power of n",
@@ -48,7 +48,7 @@
         ]
     },
     {
-        "text" : "What is the output of this block of code?",
+        "text" : "What is the output of this block of code",
         "code" : "for(int x = 0; x <= 6; x++)\n{\n\tif(x % 2 == 0)\n\t{\n\t\tSystem.out.print(x+ \" \");\n\t}\n}",
         "answers" : [
           "0 2 4 6",
@@ -68,21 +68,21 @@
         ]
     },
     {
-        "text" : "True or false, a break statement escapes from the control structure it is inside.",
+        "text" : "True or false, a break statement escapes from the control structure it is inside",
         "answers" : [
           "True",
           "False"
         ]
     },
     {
-        "text" : "True or false, a return statement terminates a method it is inside.",
+        "text" : "True or false, a return statement terminates a method it is inside",
         "answers" : [
           "True",
           "False"
         ]
     },
     {
-        "text" : "What is returned in this block of code??",
+        "text" : "What is returned in this block of code",
         "code" : "for(int x = 0; x <= 10; x++)\n{\n\tif(x - 3 == 0)\n\t{\n\t\treturn x;\n\t}\n\tif(x == 3)\n\t{\n\t\treturn 0;\n\t}\n}",
         "answers" : [
           "3",
@@ -92,7 +92,7 @@
         ]
     },
     {
-        "text" : "What is printed out in this loop?",
+        "text" : "What is printed out in this loop",
         "code" : "\nint x = 1;\nwhile(x < 9)\n{\n\tSystem.out.println(x + \" \");\n\tx = x * 2;\n}",
         "answers" : [
           "1 2 4 8",
@@ -102,7 +102,7 @@
         ]
     },
     {
-        "text" : "What is printed out in this loop?",
+        "text" : "What is printed out in this loop",
         "code" : "\nint x = 10;\ndo\n{\n\tx = x /2 2;\n\tSystem.out.println(x + \" \");\n}while(x > 10)",
         "answers" : [
           "5 ",
