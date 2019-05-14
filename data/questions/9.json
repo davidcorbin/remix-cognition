@@ -1,0 +1,91 @@
+[
+  {
+    "text" : "What is the output of the following code",
+    "code" : "int d = 88;\nSystem.out.printf(\"Value %d\", d)",
+    "answers" : [
+      "Value 88",
+      "Value %d",
+      "Value d",
+      "Value '88'"
+    ]
+  },
+  {
+    "text" : "What are the following there values",
+    "code" : "Math.ceil(3.765)\nMath.floor(3.765)\nMath.round(3.765)",
+    "answers" : [
+      "4, 3, 4",
+      "10, 0, 4",
+      "4, 4, 4",
+      "3.8, 3.7, 4"
+    ]
+  },
+  {
+    "text" : "Suppose the following code is run every second, what is it doing",
+    "code" : "value = Math.min(value + 1, 100);",
+    "answers" : [
+      "Incrementing value until it reaches 100.",
+      "Setting value to 100",
+      "Making value get closer and closer to 100 without ever reaching it."
+    ]
+  },
+  {
+    "text" : "Which of the following is a valid way of squaring a number",
+    "answers" : [
+      "Math.pow(number, 2)",
+      "number^2",
+      "Math.sqr(number)",
+      "number ** 2"
+    ]
+  },
+  {
+    "text" : "In java, both trigonometry functions and random numbers can be accessed through Math",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "Which of the following is NOT a way to access the scanner class from the java.util package",
+    "answers" : [
+      "import util.Scanner;",
+      "java.util.Scanner s = new java.util.Scanner(\"ABCD\");",
+      "import java.util.Scanner;",
+      "import java.util.*;"
+    ]
+  },
+  {
+    "text" : "How can you make Math methods accessible without calling Math.methodName()",
+    "answers" : [
+      "By statically importing java.lang.Math.*",
+      "By naming a class Math.className.",
+      "By naming a method Math.methodName.",
+      "By creating a Math object."
+    ]
+  },
+  {
+    "text" : "What is a scanner used for",
+    "answers" : [
+      "Looking through text data.",
+      "Scanning for user input.",
+      "Waiting for a method to send data."
+    ]
+  },
+  {
+    "text" : "Which of the following is false about scanners",
+    "answers" : [
+      "myScanner.hasNext() returns the next string if it exists and null otherwise.",
+      "myScanner.next() returns the string from the scanners position to the next delimiter.",
+      "myScanner.nextLine() returns the string from the scanners position to the end of the line.",
+      "myScanner.close() should always be called once a scanner is no longer needed."
+    ]
+  },
+  {
+    "text" : "To use a scanner to read a csv (comma-separated value) file, what method should be called on the scanner",
+    "answers" : [
+      "myScanner.useDelimiter(\",\");",
+      "myScanner.start();",
+      "myScanner.readCSV();",
+      "myScanner.CSVDelimiter();"
+    ]
+  }
+]

@@ -17,25 +17,48 @@ function lessonContent () {
   }
   store.set('started', started)
   const ol = document.getElementById('lessonPages')
+  const sidebar = document.getElementById('lessons')
 
   // file I/O
   const fs = require('fs')
   let rawdata = fs.readFileSync(LESSON_FILE)
   let allLessons = JSON.parse(rawdata)
+  // Peter's attempt at lesson changes
+  // Create the iFrame and set its url
+  document.getElementById('sidebarTitle').innerHTML = allLessons[lessonID - 1].name
+  const currentIframe = document.createElement('iframe')
+  currentIframe.src = allLessons[lessonID - 1].sources[0].url
+  const currentLesson = document.createElement('div')
+  currentLesson.className = 'currentLesson'
+  currentLesson.append(currentIframe)
+  ol.append(currentLesson)
+  // End attempt
   allLessons.forEach(function (element) {
     if (element.id.toString() === lessonID) {
-      document.getElementById('lessonContent').innerHTML = element.name
+      // document.getElementById('lessonContent').innerHTML = element.name
       element.sources.forEach(function (source, i) {
-        const ifram = document.createElement('iframe')
-        ifram.src = source.url
+        // const ifram = document.createElement('iframe')
+        // ifram.src = source.url
 
         const individualLessonDiv = document.createElement('div')
-        individualLessonDiv.className = 'individualLesson'
-        const lessonTitle = document.createElement('h3')
-        lessonTitle.innerText = i + 1 + '. ' + source.title
-        individualLessonDiv.append(lessonTitle)
-        individualLessonDiv.append(ifram)
-        ol.append(individualLessonDiv)
+        const individualLesson = document.createElement('a')
+        individualLesson.innerHTML = source.title
+        individualLesson.className = ''
+        individualLesson.addEventListener('click', () => {
+          currentIframe.src = source.url
+          individualLesson.parentElement.parentElement.childNodes.forEach(function (sibling) {
+            sibling.firstChild.className = ''
+          })
+          individualLesson.className = 'started'
+        })
+        if (i === 0) {
+          individualLesson.className = 'started'
+        }
+        // const lessonTitle = document.createElement('h3')
+        // lessonTitle.innerText = i + 1 + '. ' + source.title
+        individualLessonDiv.append(individualLesson)
+        // individualLessonDiv.append(ifram)
+        sidebar.append(individualLessonDiv)
       })
     }
   })

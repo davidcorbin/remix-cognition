@@ -1,3 +1,8 @@
+@keyframes spin {
+  from {transform: rotate(-10deg);}
+  to {transform: rotate(20deg);}
+}
+
 .sidebar a {
 	font-size: 100%;
 	font-family: inherit;
@@ -80,4 +85,26 @@
 #progChart {
 	width: 200px;
 	height: 200px;
+}
+
+
+.mascot {
+	transform: rotate(-10deg);
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.mascotBubbleDiv {
+	background-color: var(--button-finished); 
+	border-radius: 25px 25px 25px 0px; 
+	font-family: 'Comic Sans MS';
+}
+
+.message {
+	padding-right: 20px; 
+	padding-left: 20px; 
+	padding-top: 10px; 
+	padding-bottom: 10px;
 }

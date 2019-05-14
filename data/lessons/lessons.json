@@ -1,7 +1,81 @@
 [
   {
-    "name": "Classes",
+    "name": "Variables",
     "id": 1,
+    "sources": [
+      {
+        "title": "Comments and Main",
+        "url": "https://docs.oracle.com/javase/tutorial/getStarted/application/index.html"
+      },
+      {
+        "title": "Variables",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html"
+      },
+      {
+        "title": "Primitive Data Types",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"
+      }
+    ]
+  },
+  {
+    "name": "Operators",
+    "id": 2,
+    "sources": [
+      {
+        "title": "Operators",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html"
+      },
+      {
+        "title": "Operators Part 1",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html"
+      },
+      {
+        "title": "Operators Part 2",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html"
+      },
+      {
+        "title": "Bitwise Operators",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html"
+      },
+      {
+        "title": "Expresions",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/expressions.html"
+      }
+    ]
+  },
+  {
+    "name": "Control Flow",
+    "id": 3,
+    "sources": [
+      {
+        "title": "Control Flow",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html"
+      },
+      {
+        "title": "If Statements",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"
+      },
+      {
+        "title": "Switch Statements",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"
+      },
+      {
+        "title": "While Loops",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"
+      },
+      {
+        "title": "For Loops",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"
+      },
+      {
+        "title": "Break and Return",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html"
+      }
+    ]
+  },
+  {
+    "name": "Classes",
+    "id": 4,
     "sources": [
       {
         "title": "Classes",
@@ -35,7 +109,7 @@
   },
   {
     "name": "Methods",
-    "id": 2,
+    "id": 5,
     "sources": [
       {
         "title": "Methods",
@@ -57,7 +131,7 @@
   },
   {
     "name": "Special Methods",
-    "id": 3,
+    "id": 6,
     "sources": [
       {
         "title": "Constructors",
@@ -70,6 +144,166 @@
       {
         "title": "Other Object Methods",
         "url": "https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html"
+      }
+    ]
+  },
+  {
+    "name": "Interfaces",
+    "id": 7,
+    "sources":[
+      {
+        "title": "Interfaces",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html"
+      },
+      {
+        "title": "Defining Interfaces",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/interfaceDef.html"
+      },
+      {
+        "title": "Implementation",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html"
+      },
+      {
+        "title": "Type",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html"
+      },
+      {
+        "title": "Evolving Interfaces",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/nogrow.html"
+      },
+      {
+        "title": "Default",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html"
+      }
+    ]
+  },
+  {
+    "name": "Inheritance",
+    "id": 8,
+    "sources":[
+      {
+        "title": "Inheritance",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html"
+      },
+      {
+        "title": "Multiple",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html"
+      },
+      {
+        "title": "Overriding",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/override.html"
+      },
+      {
+        "title": "Polymorphism",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html"
+      },
+      {
+        "title": "Super",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/super.html"
+      },
+      {
+        "title": "Final",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/final.html"
+      },
+      {
+        "title": "Abstract",
+        "url": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+      }
+    ]
+  },
+  {
+    "name": "Java Lib. and I/O",
+    "id": 9,
+    "sources":[
+      {
+        "title": "Print",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/numberformat.html"
+      },
+      {
+        "title": "Math",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/beyondmath.html"
+      },
+      {
+        "title": "Packages",
+        "url": "https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html"
+      },
+      {
+        "title": "Scanner",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/io/scanning.html"
+      }
+    ]
+  },
+  {
+    "name": "Arrays and Chars",
+    "id": 10,
+    "sources":[
+      {
+        "title": "Arrays",
+        "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html"
+      },
+      {
+        "title": "2D Arrays",
+        "url": "https://docs.oracle.com/javase/tutorial/reflect/special/arraySetGet.html"
+      },
+      {
+        "title": "Characters",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/characters.html"
+      }
+    ]
+  },
+  {
+    "name": "Strings",
+    "id": 11,
+    "sources":[
+      {
+        "title": "Strings",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/strings.html"
+      },
+      {
+        "title": "Numbers to Strings",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/converting.html"
+      },
+      {
+        "title": "Characters in Strings",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html"
+      },
+      {
+        "title": "Comparison",
+        "url": "https://docs.oracle.com/javase/tutorial/java/data/comparestrings.html"
+      }
+    ]
+  },
+  {
+    "name": "Exceptions",
+    "id": 12,
+    "sources":[
+      {
+        "title": "Exceptions",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html"
+      },
+      {
+        "title": "Handling Exceptions",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/handling.html"
+      },
+      {
+        "title": "Try",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/try.html"
+      },
+      {
+        "title": "Catch",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/catch.html"
+      },
+      {
+        "title": "Finally",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html"
+      },
+      {
+        "title": "Throws",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/declaring.html"
+      },
+      {
+        "title": "Throwing Exceptions",
+        "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/throwing.html"
       }
     ]
   }

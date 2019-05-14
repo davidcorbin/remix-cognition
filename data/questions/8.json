@@ -1,0 +1,110 @@
+[
+  {
+    "text" : "Which of the following would not be a subclass of a class called FourSidedShape",
+    "answers" : [
+      "Shape.",
+      "Quadrilateral.",
+      "Square",
+      "Parallelogram"
+    ]
+  },
+  {
+    "text" : "From which of the following do all java classes inherit",
+    "answers" : [
+      "The Object class.",
+      "The Element class.",
+      "The Class interface.",
+      "The java package."
+    ]
+  },
+  {
+    "text" : "When one class extends another class, what is inherited",
+    "answers" : [
+      "All fields and methods.",
+      "Only methods.",
+      "Only fields and methods that are public.",
+      "All fields and constructors."
+    ]
+  },
+  {
+    "text" : "What is the purpose of the protected keyword",
+    "answers" : [
+      "It allows something to be accessible only to its class and classes that inherit it.",
+      "It prevents other classes from modifying its value.",
+      "It prevents any modification of its value.",
+      "It allows something to be accessible to every class except the one that it is in."
+    ]
+  },
+  {
+    "text" : "Which of the following can NOT be done in a subclass",
+    "answers" : [
+      "Use private fields of its superclass.",
+      "Use inherited fields and methods.",
+      "Hide inherited fields.",
+      "Override inherited methods."
+    ]
+  },
+  {
+    "text" : "Which of the following is a proper use of casting",
+    "answers" : [
+      "Object a = new ObjectSubclass();",
+      "ObjectSubclass a = new Object();"
+    ]
+  },
+  {
+    "text" : "A class can only extend one class",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "The keyword @Override must be used when overriding an inherited method",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "When is polymorphism used",
+    "answers" : [
+      "When multiple different subclasses are being treated as their superclass.",
+      "When multiple classes have the same subclass.",
+      "When a superclass is being treated as its subclass.",
+      "When a subclass wants to use a method from its superclass that it has overriden."
+    ]
+  },
+  {
+    "text" : "When can the super keyword be used",
+    "answers" : [
+      "When in a method that overrides one of its superclass's methods.",
+      "When in a superclass.",
+      "When declaring a field that inherits from its superclass.",
+      "When using a field from a superclass."
+    ]
+  },
+  {
+    "text" : "The following code is the proper way to call the constructor of the superclass",
+    "code" : "className.super();",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "Classes defined with the final keyword cannot be overridden",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "Which of the following is NOT true about abstract methods",
+    "answers" : [
+      "An abstract method must be implemented in every subclass.",
+      "An abtract method must be in an abstract class.",
+      "An abstract method has no body.",
+      "An abstract method may be an implementation of an interface method."
+    ]
+  }
+]

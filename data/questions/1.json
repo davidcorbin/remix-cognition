@@ -1,95 +1,96 @@
 [
   {
-    "text" : "How many objects instances can you create from a class",
+    "text" : "How do you write a single line text comment in Java",
     "answers" : [
-      "Infinitely many object instances can be created from one class.",
-      "Only one object can be created per class.",
-      "You can only create a set number of objects per class, this number is defined in the class.",
-      "You can create only one object instance per constructor in the class."
+      "// Comment",
+      "/* Comment ",
+      "/** Comment */",
+      "#Comment"
     ]
   },
   {
-    "text" : "Which of the following determines the functions of an object",
+    "text" : "How do you write a block text comment in Java?",
     "answers" : [
-      "Methods",
-      "Constructors",
-      "Class",
-      "Variables"
+      "/* Comment */",
+      "// Comment",
+      "/** Comment */",
+      "#Comment"
     ]
   },
   {
-    "text" : "Which of the following sets up an instance of the object",
+    "text" : "How do you write a documentation comment in Java?",
     "answers" : [
-      "Constructors",
-      "Methods",
-      "Class",
-      "Variables"
+      "/** Comment */",
+      "/* Comment */",
+      "// Comment",
+      "#Comment"
     ]
   },
   {
-    "text" : "What surrounds the class body",
+    "text" : "How is the main method started in a Java program",
     "answers" : [
-      "Braces {}",
-      "Parenthesis ()",
-      "Brackets []",
-      "Angle brackets <>"
+      "public static void main(String[] args)",
+      "public void main(String[] args)",
+      "public static void main(String args[])",
+      "public main(String args[])"
     ]
   },
   {
-    "text" : "When is the 'new' keyword used",
+    "text" : "Instance variables are static",
     "answers" : [
-      "When initializing an object",
-      "When declaring a class",
-      "To give a field a new value"
+      "false",
+      "true"
     ]
   },
   {
-    "text" : "What kind of variable is 'radius' in public Circle(int radius)",
+    "text" : "How many copies of static variables exist",
     "answers" : [
-      "Parameter",
-      "Local variable",
-      "Field"
+      "one",
+      "one per object",
+      "many"
     ]
   },
   {
-    "text" : "What kind of variable is located at the beginning of a class",
+    "text" : "Variables are case sensitive",
     "answers" : [
-      "Field",
-      "Local variable",
-      "Parameter"
+      "true",
+      "false"
     ]
   },
   {
-    "text" : "What kind of variable is located inside the body of a method",
+    "text" : "Which of these is not a primitive data type",
     "answers" : [
-      "Local variable",
-      "Field",
-      "Parameter"
+      "string",
+      "int",
+      "boolean",
+      "double"
     ]
   },
   {
-    "text" : "What kind of variable belongs to the class instead of a specific instance of that class",
+    "text" : "Which of these data types holds a number that has a decimal point",
     "answers" : [
-      "Static variable",
-      "Public variable",
-      "Fields",
-      "Getters"
+      "double",
+      "int",
+      "long",
+      "byte"
     ]
   },
   {
-    "text" : "Java objects need to be deleted once they are no longer being used",
+    "text" : "How do you declare an integer i with an initial value of 10?",
     "answers" : [
-      "False",
-      "True"
+      "int i = 10;",
+      "int i = new int(10)",
+      "int i = new int = 10;",
+      "int = 10;"
     ]
   },
   {
-    "text" : "What are the components of a field declaration",
+    "text" : "How do you declare a char c with an initial value of the character j",
     "answers" : [
-      "Modifiers, data type, and name",
-      "Data type and name",
-      "Scope level and name",
-      "Size, data type, and name"
+      "char c = 'j';",
+      "char j = c;",
+      "char c = \"j\";",
+      "char c = new char(j);"
     ]
   }
 ]

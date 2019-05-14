@@ -1,0 +1,85 @@
+[
+  {
+    "text" : "Which of the following do interfaces NOT contain",
+    "answers" : [
+      "Constructors.",
+      "Constants.",
+      "Method signatures.",
+      "Static methods."
+    ]
+  },
+  {
+    "text" : "Which interface methods can have bodies",
+    "answers" : [
+      "Static and default methods.",
+      "Constructors and static methods.",
+      "None.",
+      "Overridden methods."
+    ]
+  },
+  {
+    "text" : "Interfaces are a type of class",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "Which of the following is NOT true about interfaces",
+    "answers" : [
+      "Interfaces inherit from java Objects.",
+      "Multiple interfaces can be implemented in a class.",
+      "Interfaces can implement interfaces.",
+      "An object can be cast to an interface type."
+    ]
+  },
+  {
+    "text" : "A safe way to modify an existing interface is to create a new interface with modifications that implements the original interface",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "What can you NOT do when implementing an interface with a default method",
+    "answers" : [
+      "Remove the default method.",
+      "Redeclare the default method as an abstract method.",
+      "Override the default method.",
+      "Inherit the default method."
+    ]
+  },
+  {
+    "text" : "Do java Strings implement the Comparable interface",
+    "answers" : [
+      "Yes.",
+      "No."
+    ]
+  },
+  {
+    "text" : "What is wrong with the following interface",
+    "code" : "public class interface myInterface {}",
+    "answers" : [
+      "It shouldn't have the class keyword.",
+      "It needs paranthesis after myInterface.",
+      "Interfaces use bracket instead of braces.",
+      "Interfaces shouldn't be public."
+    ]
+  },
+  {
+    "text" : "Which of the following to interfaces NOT have",
+    "answers" : [
+      "Constructors.",
+      "Method parameters.",
+      "Static methods.",
+      "Import statements."
+    ]
+  },
+  {
+    "text" : "Interfaces can have static methods",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  }
+]

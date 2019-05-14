@@ -1,0 +1,84 @@
+[
+  {
+    "text" : "Which of the following is NOT true",
+    "answers" : [
+      "Arrays can hold multiple types of values.",
+      "Arrays can hold a single item.",
+      "Arrays are objects.",
+      "The index of an array starts at 0."
+    ]
+  },
+  {
+    "text" : "Which of the following is a proper array declaration",
+    "answers" : [
+      "int[] myArray = new int[5];",
+      "int myArray[] = new Array();",
+      "int[] myArray = int[];",
+      "int[] new array int[5];"
+    ]
+  },
+  {
+    "text" : "The following code is a valid way of setting a value in an array",
+    "code" : "myArray.add(0);",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "What will the following code return",
+    "code" : "int[] myArray = new int[5];\nreturn int[5];",
+    "answers" : [
+      "An out of bounds exception.",
+      "null",
+      "0"
+    ]
+  },
+  {
+    "text" : "What will the following code return",
+    "code" : "int[] myArray = new int[5];\nreturn int[4];",
+    "answers" : [
+      "0",
+      "An out of bounds exception.",
+      "null"
+    ]
+  },
+  {
+    "text" : "All columns of a 2D array must be the same length",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  },
+  {
+    "text" : "The arraycopy method will copy the values in an array into another array.",
+    "answers" : [
+      "True",
+      "False"
+    ]
+  },
+  {
+    "text" : "Which is the optimal way to access all elements from a 2D array using the following nested for loop",
+    "code" : "for(int j=0; j<9; j++)\n\tfor(int i=0; i<9; i++)",
+    "answers" : [
+      "myArray[j][i]",
+      "myArray[i][j]"
+    ]
+  },
+  {
+    "text" : "Which of the following is false regarding escape sequences",
+    "answers" : [
+      "\\u inserts an underscore.",
+      "\\t inserts a tab.",
+      "\\n inserts a new line.",
+      "\\\" inserts a \"."
+    ]
+  },
+  {
+    "text" : "Characters are java objects",
+    "answers" : [
+      "False",
+      "True"
+    ]
+  }
+]

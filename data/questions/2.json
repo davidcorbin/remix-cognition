@@ -1,86 +1,64 @@
 [
   {
-    "text" : "In the method declaration, what goes before the method name",
+    "text" : "What is the order of operations for operators",
     "answers" : [
-      "The return type",
-      "The access modifier",
-      "The parameter list",
-      "The method body"
+      "multiplication, addition, assigment",
+      "assignment, multiplication, addition",
+      "multiplication, assignment, equality",
+      "relational, equality, multiplication"
     ]
   },
   {
-    "text" : "In the method declaration, what goes inside the parenthesis",
+    "text" : "How do you assign a value of 10 to int i",
     "answers" : [
-      "The parameter list",
-      "The access modifier",
-      "The return type",
-      "The method body"
+      "i = 10;",
+      "i == 10;",
+      "i += 10;",
+      "10 = i;"
     ]
   },
   {
-    "text" : "Which of the following should be used as a method name",
+    "text" : "Which of these is an invalid use of a unary operation",
     "answers" : [
-      "bigBox",
-      "BigBox",
-      "bigbox",
-      "Box"
+      "==i;",
+      "++i;",
+      "+i",
+      "--i"
     ]
   },
   {
-    "text" : "Which of the following is a valid parameter list for a method declaration",
+    "text" : "How do you check if an integer i is equal to 10",
     "answers" : [
-      "methodName(int param1, int param2)",
-      "methodName(param)",
-      "methodName(param1, param2)",
-      "methodName(int param1; int)"
+      "i == 10;",
+      "i = 10;",
+      "10 = i;",
+      "i.equals(10);"
     ]
   },
   {
-    "text" : "What must be unique for every overloaded method",
+    "text" : "what is j after this operation",
+    "code" : "j = true && false;",
     "answers" : [
-      "The number or type of parameters",
-      "The method name",
-      "The access modifier",
-      "The return type"
+      "false",
+      "true"
     ]
   },
   {
-    "text" : "Method overloading allows a method to behave differently for different data types",
+    "text" : "what is j after this operation",
+    "code" : "j = true || false;",
     "answers" : [
-      "True",
-      "False"
+      "true",
+      "false"
     ]
   },
   {
-    "text" : "The following is a valid method call: setBalance(int newBalance)",
+    "text" : "what is i after this operation",
+    "code" : "int i = 1+2*12/3+1;",
     "answers" : [
-      "False",
-      "True"
-    ]
-  },
-  {
-    "text" : "What does it mean to pass a variable to a method by value",
-    "answers" : [
-      "A copy of the variable is made so any modifications are made to the copy instead of original variable",
-      "A backup is made of the variable so when the method returns, the variable can be reset",
-      "The variable becomes final and cannot be modified within the method",
-      "The value of the variable is used to tell the method where it is stored in memory"
-    ]
-  },
-  {
-    "text" : "Java uses references when passing objects",
-    "answers" : [
-      "True",
-      "False"
-    ]
-  },
-  {
-    "text" : "Why can an object passed to a method be modified within that method",
-    "answers" : [
-      "Because it is the reference to the object that is passed",
-      "Because it is passed by value so its values can be changed",
-      "Because when the method returns the copy of the object is used to overwrite the original object",
-      "It cannot be modified since it is passed by value"
+      "10",
+      "9",
+      "8",
+      "7"
     ]
   }
 ]

@@ -18,6 +18,17 @@
         <!-- All of the Node.js APIs are available in this renderer process. -->
         Welcome to Remix Cognition, the intelligent AP Computer Science tutor.
         <br><br>
+        <p>Your grade is <span id="grade"></span>%.</p>
+        <table>
+          <td><img class = "mascot" src="data/Mascot.png" alt="Mascot" vertical-align="middle" height="126" width="77"></td>
+          <td style = "width:40px"></td>
+          <td>
+            <div class = "mascotBubbleDiv">
+              <p id="message" class = "message"></p>
+            </div>
+          </td>
+        </table>
+        <p></p>
         <div id="progress">
           <p>You have <span id="unstartedLessons"></span> lessons left:</p>
           <canvas id="progChart"></canvas>

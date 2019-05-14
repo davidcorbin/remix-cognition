@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Remix Cognition</title>
-    <link rel="stylesheet" href="css/mainstyle.css"/>
-    <link rel="stylesheet" href="css/lessonstyle.css"/>
-  </head>
-  <body class="noselect">
-    <div class="navbar">
-      <div class="nav-left">
-        <a href="index.html">Home</a>
-      </div>
-      <div class="nav-middle">
-        <h1 id="lessonContent">Lesson</h1>
-      </div>
-      <div class="nav-right">
-        <a class="gotoQuiz">Quiz</a>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Remix Cognition</title>
+  <link rel="stylesheet" href="css/mainstyle.css" />
+  <link rel="stylesheet" href="css/lessonstyle.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+</head>
+
+<body class="noselect">
+  <div class="sidebar noselect">
+    <h1 id="sidebarTitle" class="lesson-sidebar-title">tmp</h1>
+    <div id="lessons" class="noselect"></div>
+  </div>
+  <div class="navbar">
+    <div class="nav-left"></div>
+    <div class="nav-middle">
+        <div class="actionButton">
+            <a href="index.html">Home</a>
+          </div>
+    </div>
+    <div class="nav-right">
+      <div class="actionButton">
+        <a class="gotoQuiz">Take Quiz</a>
       </div>
     </div>
-    <div id="lessonPages"></div>
-    <div class="actionButton">
-      <a class="gotoQuiz">Take Quiz</a>
-    </div>
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-    <script type="text/javascript" src="js/lessonContent.js"></script>
-  </body>
+  </div>
+  <div id="lessonPages" class="content2">
+    
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+  <script type="text/javascript" src="js/lessonContent.js"></script>
+</body>
+
 </html>
