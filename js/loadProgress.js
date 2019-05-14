@@ -65,7 +65,7 @@ function loadProgress () {
   // Get quiz data for chart
   var grade = 0
   var numQuizzes = 0
-  var quizSuggestion
+  var quizSuggestion, qsuggPerc
   var quizzes = store.get('quizzes')
   var labels = []
   var data = []
@@ -77,8 +77,13 @@ function loadProgress () {
     grade += percent
     numQuizzes++
     // If this quiz is the lowest score so far, save it to quizSuggestion
-    if (percent < grade / numQuizzes) {
+    if (quizSuggestion == null || typeof quizSuggestion === 'undefined') {
       quizSuggestion = q
+      qsuggPerc = percent
+    }
+    if (percent < qsuggPerc) {
+      quizSuggestion = q
+      qsuggPerc = percent
     }
     console.log(quiz.numCorrect)
     data.push(percent)
@@ -202,6 +207,19 @@ function loadProgress () {
   grade = grade.toFixed(2)
   var gradeElement = document.getElementById('grade')
   gradeElement.innerHTML = grade
+  var letterGrade = 'F'
+  if (grade > 90) {
+    letterGrade = 'A'
+  } else if (grade > 80) {
+    letterGrade = 'B'
+  } else if (grade > 70) {
+    letterGrade = 'C'
+  } else if (grade > 60) {
+    letterGrade = 'D'
+  }
+  gradeElement = document.getElementById('letterGrade')
+  gradeElement.innerHTML = letterGrade
+  gradeElement.className += ' ' + letterGrade
   console.log(labels)
   console.log(data)
   console.log(backgroundColor)
@@ -282,7 +300,7 @@ function loadProgress () {
   let messageData = JSON.parse(fs.readFileSync(MESSAGE_FILE))
   var mascotMessage = document.getElementById('message')
   var message
-  if (grade > 90) {
+  if (grade >= 90) {
     message = messageData.good[Math.floor(Math.random() * messageData.good.length)]
   } else {
     message = messageData.retake[Math.floor(Math.random() * messageData.retake.length)]
