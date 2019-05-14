@@ -304,8 +304,8 @@ function loadProgress () {
   let messageData = JSON.parse(fs.readFileSync(MESSAGE_FILE))
   var mascotMessage = document.getElementById('message')
   var message
-  if (numQuizzes == 0) {
-    message = "You should try taking a quiz!"
+  if (numQuizzes === 0) {
+    message = 'You should try taking a quiz!'
   } else if (grade >= 90) {
     message = messageData.good[Math.floor(Math.random() * messageData.good.length)]
   } else {
