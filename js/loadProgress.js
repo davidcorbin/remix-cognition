@@ -13,6 +13,10 @@ function loadProgress () {
   const totalLessons = Object.keys(LESSON_DATA).length
   const MESSAGE_FILE = df.getMessagesFile()
 
+  const MASCOT_IMAGE = df.autoGetPath('data/Mascot.png')
+  var mascotImg = document.getElementById('mascot')
+  mascotImg.src = MASCOT_IMAGE
+
   // Get num of lessons started and finished from store
   var fiArr = store.get('finished')
   if (!Array.isArray(fiArr) || !fiArr.length) {
@@ -300,7 +304,9 @@ function loadProgress () {
   let messageData = JSON.parse(fs.readFileSync(MESSAGE_FILE))
   var mascotMessage = document.getElementById('message')
   var message
-  if (grade >= 90) {
+  if (numQuizzes == 0) {
+    message = "You should try taking a quiz!"
+  } else if (grade >= 90) {
     message = messageData.good[Math.floor(Math.random() * messageData.good.length)]
   } else {
     message = messageData.retake[Math.floor(Math.random() * messageData.retake.length)]
