@@ -1,15 +1,23 @@
-#lessonPages {
-    padding: 0 40px;
+.navbar > * {
+	padding: 0;
+	margin-left: 100px;
 }
 
-.individualLesson iframe {
-    width: 100%;
-    background: #fff;
-    height: 75vh;
+.content {
+	text-align: center;
+	outline: 2px solid #0f0;
+	width: 70%;
+	margin: 10 auto;
+}
+
+#lessonPages {
+	outline: 2px solid #f00;
+	width: 100%;
 }
 
 .currentLesson iframe {
+	outline: 2px solid #00f;
     width: 100%;
+    height: 100vh;
     background: #fff;
-    height: 75vh;
 }
