@@ -1,0 +1,40 @@
+# install
+Instructions must be completed **in order**, as later packages depend on earlier packages.
+*Please be aware of license (CC BY-NC-ND 4.0) and its restrictions while using this software.*
+1. Clone Repository
+    1. `$ git clone git@github.com:davidcorbin/remix-cognition.git`
+1. Install Node.JS https://nodejs.org/en/
+1. Install npm https://www.npmjs.com
+1. Install yarn https://yarnpkg.com/en/
+1. Install Electron https://electronjs.org
+1. Install StandardJS https://standardjs.com
+1. Install Electron-Builder https://www.electron.build
+1. Install Spectron https://electronjs.org/spectron
+1. Install Chart.JS https://www.chartjs.org
+1. Install Mocha https://mochajs.org
+1. Install Dependencies:
+    1. `$ npm install electron-reload htmlhint snazzy xvfb-maybe electron-store`
+1. Restart Computer
+    1. Windows `shutdown /r`
+    1. GNU/Linux `$ shutdown -r`
+    1. MacOS `$ shutdown -r`
+1. Install npm dependencies
+    1. Windows `npm install`
+    1. GNU/Linux `$ npm install`
+    1. MacOS `$ npm install`
+1. Run npm tests
+    1. Windows `npm test`
+    1. GNU/Linux `$ npm test`
+    1. MacOS `$ npm test`
+1. Build
+    1. Windows `yarn dist-all`
+    1. GNU/Linux `$ yarn dist-all`
+    1. MacOS `$ yarn dist-all`
+1. Run Executable
+    1. Windows `Remix Cognition x.y.z.exe`
+    1. GNU/Linux 
+        1. `$ tar -xzf remix-cognition-x.y.z.tar.gz`
+        1. `$ ./remix-cognition-x.y.z`
+    1. MacOS
+        1. Mount and Open `Remix Cognition-x.y.z.dmg`
+        1. Run `Remix Cognition-x.y.z.app`
